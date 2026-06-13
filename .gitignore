@@ -32,3 +32,6 @@ next-env.d.ts
 
 # impeccable review snapshots (tooling output)
 .impeccable/
+
+# brand source archives (keep binaries out of git)
+*.rar

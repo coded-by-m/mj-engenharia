@@ -21,6 +21,7 @@ export function Footer() {
             <p className="mt-3 text-sm">
               {site.legalLead} · {site.crea}
             </p>
+            <p className="mt-1 text-sm">CNPJ {site.cnpj}</p>
           </div>
 
           <nav aria-label="Rodapé">

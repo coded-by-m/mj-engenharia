@@ -9,6 +9,7 @@ export const site = {
   name: "MJ Engenharia Preventiva",
   legalLead: "Eng. Civil Milton Chagas",
   crea: "CREA/SC 173.926-0",
+  cnpj: "50.770.976/0001-11",
   region: "Grande Florianópolis / SC",
   url: "https://mj.eng.br",
 
