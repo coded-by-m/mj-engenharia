@@ -5,7 +5,7 @@ import { segments } from "@/lib/site";
 
 export function Segmentos() {
   return (
-    <Section id="segmentos" variant="alt">
+    <Section id="segmentos" variant="alt" space="tight">
       <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
         <h2 className="display display-lg max-w-xl text-brand-deep">
           Atende quem precisa{" "}

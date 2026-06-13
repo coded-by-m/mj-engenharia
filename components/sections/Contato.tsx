@@ -10,7 +10,7 @@ export function Contato() {
     <Section id="contato" variant="alt">
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
-          <SectionHeader num="07" kicker="Contato" title="Fale com um engenheiro">
+          <SectionHeader num="08" kicker="Contato" title="Fale com um engenheiro">
             Prefere conversar agora? Chame no WhatsApp. Ou envie seus dados pelo
             formulário.
           </SectionHeader>

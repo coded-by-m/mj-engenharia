@@ -7,7 +7,7 @@ import { specialties } from "@/lib/site";
 
 export function Especialidades() {
   return (
-    <Section id="especialidades" variant="light">
+    <Section id="especialidades" variant="light" space="loose">
       <SectionHeader
         num="01"
         kicker="Especialidades"

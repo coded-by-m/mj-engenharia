@@ -6,6 +6,7 @@ import { ComoFunciona } from "@/components/sections/ComoFunciona";
 import { Segmentos } from "@/components/sections/Segmentos";
 import { Sobre } from "@/components/sections/Sobre";
 import { Diferenciais } from "@/components/sections/Diferenciais";
+import { Projetos } from "@/components/sections/Projetos";
 import { Faq } from "@/components/sections/Faq";
 import { CtaFinal } from "@/components/sections/CtaFinal";
 import { Contato } from "@/components/sections/Contato";
@@ -21,6 +22,7 @@ export default function Home() {
       <Segmentos />
       <Sobre />
       <Diferenciais />
+      <Projetos />
       <Faq />
       <CtaFinal />
       <Contato />

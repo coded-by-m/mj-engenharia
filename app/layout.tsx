@@ -27,14 +27,13 @@ const barlowCondensed = Barlow_Condensed({
   display: "swap",
 });
 
-const SITE_URL = "https://mjengenharia.com.br";
+const SITE_URL = "https://mj.eng.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default:
-      "MJ Engenharia — Projetos de PPCI e SPDA | Grande Florianópolis/SC",
-    template: "%s | MJ Engenharia",
+    default: "MJ Engenharia Preventiva | PPCI e SPDA na Grande Florianópolis",
+    template: "%s | MJ Engenharia Preventiva",
   },
   description:
     "Projetos de Preventivo Contra Incêndio (PPCI) e SPDA com assinatura de engenheiro, do dimensionamento à aprovação. Atendimento em toda a Grande Florianópolis/SC.",
@@ -53,8 +52,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: SITE_URL,
-    siteName: "MJ Engenharia",
-    title: "MJ Engenharia — Projetos de PPCI e SPDA",
+    siteName: "MJ Engenharia Preventiva",
+    title: "MJ Engenharia Preventiva: Projetos de PPCI e SPDA",
     description:
       "Engenharia preventiva com foco em projetos de PPCI e SPDA. Falar com um engenheiro.",
   },
@@ -77,9 +76,9 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "MJ Engenharia",
+  name: "MJ Engenharia Preventiva",
   description:
-    "Engenharia preventiva — projetos de PPCI e SPDA na Grande Florianópolis/SC.",
+    "Engenharia preventiva: projetos de PPCI e SPDA na Grande Florianópolis/SC.",
   areaServed: "Grande Florianópolis, Santa Catarina, Brasil",
   // TODO (CONTENT_PENDING): telephone, address, CREA, sameAs (social), url
   knowsAbout: [

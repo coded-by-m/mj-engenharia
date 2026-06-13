@@ -6,20 +6,18 @@
  */
 
 export const site = {
-  name: "MJ Engenharia",
+  name: "MJ Engenharia Preventiva",
   legalLead: "Eng. Civil Milton Chagas",
-  crea: "CREA/SC [pendente]", // TODO(CONTENT_PENDING) CNT-002
+  crea: "CREA/SC 173.926-0",
   region: "Grande Florianópolis / SC",
-  url: "https://mjengenharia.com.br",
+  url: "https://mj.eng.br",
 
-  // TODO(CONTENT_PENDING) CNT-001 — replace with official number (digits only, with country+DDD, e.g. 5548999990000)
-  whatsappNumber: "0000000000",
+  whatsappNumber: "5548999899681",
   whatsappDefaultMessage:
     "Olá! Vim pelo site e gostaria de falar com um engenheiro sobre um projeto.",
 
-  // TODO(CONTENT_PENDING) CNT-009
-  email: "[email pendente]",
-  phone: "[telefone pendente]",
+  email: "contato@mj.eng.br",
+  phone: "+55 (48) 99989-9681",
 
   // TODO(CONTENT_PENDING) CNT-008 — confirm URLs
   social: {
@@ -37,6 +35,7 @@ export const nav = [
   { label: "Soluções", href: "#solucoes" },
   { label: "Processo", href: "#processo" },
   { label: "Sobre", href: "#sobre" },
+  { label: "Projetos", href: "#projetos" },
   { label: "Contato", href: "#contato" },
 ] as const;
 
@@ -58,12 +57,17 @@ export const specialties = [
     image: "/img/ppci.jpg",
     alt: "Sala de bombas de um sistema de combate a incêndio, com tubulação e válvulas vermelhas.",
     description:
-      "Dimensionamento e detalhamento do sistema de prevenção e proteção contra incêndio, do projeto à aprovação no CBMSC.",
+      "Análise da concepção original, dimensionamento e regularização de obras existentes. Elaboramos projetos, laudos e vistorias para aprovação e emissão de Habite-se e Funcionamento no CBMSC.",
     deliverables: [
+      "Análise da concepção original da arquitetura",
       "Memorial e dimensionamento",
       "Pranchas e detalhamento técnico",
       "ART de projeto",
-      "Acompanhamento até a aprovação",
+      "Aprovação do projeto",
+      "Emissão do Atestado de Habite-se",
+      "Emissão de Atestado de Funcionamento",
+      "Regularização de imóveis existentes",
+      "Consultoria técnica",
     ],
   },
   {
@@ -77,10 +81,12 @@ export const specialties = [
     description:
       "Sistema de proteção contra descargas atmosféricas conforme NBR 5419, do levantamento de risco ao projeto executivo.",
     deliverables: [
-      "Avaliação de risco (NBR 5419)",
-      "Projeto e detalhamento",
+      "Análise e gerenciamento de risco (NBR 5419)",
+      "Memorial e dimensionamento",
+      "Pranchas e detalhamentos técnicos",
       "ART de projeto",
-      "Adequação e acompanhamento",
+      "Adequações e acompanhamentos",
+      "Laudos e vistorias",
     ],
   },
 ] as const;
@@ -120,7 +126,60 @@ export const services = [
   {
     icon: "ic-laudo",
     title: "Laudos e regularização",
-    text: "Laudo técnico, AVCB e regularização (serviço complementar).",
+    text: "Laudo técnico, Atestado de Habite-se, Atestado de Funcionamento e regularização (serviço complementar).",
+  },
+] as const;
+
+/**
+ * Completed projects — track record. Anonymized: no client name or city
+ * (DEC: anonimizar). Each entry renders a duotone prancha when `image` is set,
+ * otherwise an engineering-blueprint placeholder keyed by `icon`.
+ *
+ * TODO(CONTENT_PENDING) CNT-010 — confirm real metrics (ano, porte, resultado)
+ * with the client. Values below are realistic placeholders. Project 01 has real
+ * drawings: save them to /public/img/projetos/projeto-01-ppci.jpg and set
+ * `image` to that path (duotone navy is applied in CSS).
+ */
+export const projects = [
+  {
+    tag: "PPCI",
+    segment: "Edifício comercial",
+    icon: "ic-empresa",
+    year: "2024",
+    size: "4.200 m²",
+    result: "Aprovado no CBMSC",
+    image: null as string | null,
+    alt: "Prancha técnica de PPCI: central de gás, rede de hidrantes e detalhamento de sinalização de emergência.",
+  },
+  {
+    tag: "SPDA",
+    segment: "Galpão industrial",
+    icon: "ic-galpao",
+    year: "2023",
+    size: "9.800 m²",
+    result: "Projeto executivo entregue",
+    image: null as string | null,
+    alt: "",
+  },
+  {
+    tag: "PPCI",
+    segment: "Condomínio residencial",
+    icon: "ic-condominio",
+    year: "2024",
+    size: "6.500 m²",
+    result: "Aprovado no CBMSC",
+    image: null as string | null,
+    alt: "",
+  },
+  {
+    tag: "PPCI + SPDA",
+    segment: "Centro logístico",
+    icon: "ic-projeto",
+    year: "2023",
+    size: "12.000 m²",
+    result: "Aprovado no CBMSC",
+    image: null as string | null,
+    alt: "",
   },
 ] as const;
 

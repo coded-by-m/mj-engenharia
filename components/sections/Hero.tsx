@@ -5,16 +5,6 @@ import { site } from "@/lib/site";
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-brand-drench text-white">
-      {/* Engineering coordinate grid — voice, not decoration */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)",
-          backgroundSize: "clamp(48px, 6vw, 88px) clamp(48px, 6vw, 88px)",
-        }}
-      />
       {/* Single red signal sweep */}
       <div
         aria-hidden
@@ -42,9 +32,11 @@ export function Hero() {
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
           <Reveal delay={160} className="lg:col-span-7">
             <p className="max-w-xl text-lg leading-relaxed text-grey-200/85 sm:text-xl">
-              Projetos de PPCI e SPDA com assinatura de responsável técnico, do
-              dimensionamento à aprovação no CBMSC. Engenharia que resolve, não
-              que empurra.
+              Adequação de projetos de arquitetos e clientes para PPCI e SPDA:
+              máxima conformidade normativa com o menor custo de obra.{" "}
+              <span className="underline decoration-accent decoration-2 underline-offset-4">
+                Engenharia que resolve.
+              </span>
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <WhatsAppCTA size="lg" />
@@ -75,7 +67,7 @@ export function Hero() {
                 </div>
                 <div>
                   <dt className="kicker text-white/45">Aprovação</dt>
-                  <dd className="mt-1 text-white">CBMSC</dd>
+                  <dd className="mt-1 text-white">CBMSC/NBRs</dd>
                 </div>
               </dl>
             </div>

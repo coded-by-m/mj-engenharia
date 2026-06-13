@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export function CtaFinal() {
   const instagram = site.social.instagram;
   return (
-    <Section variant="navy">
+    <Section variant="navy" space="tight">
       <Reveal>
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <h2 className="display display-lg max-w-2xl text-white">
