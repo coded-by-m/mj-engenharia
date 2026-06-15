@@ -13,6 +13,13 @@ export const site = {
   region: "Grande Florianópolis / SC",
   url: "https://mj.eng.br",
 
+  // Confirmed credentials (client-provided 2026-06-15)
+  metrics: {
+    projects: "+100 trabalhos",
+    area: "+200 mil m²",
+    method: "Projetos em BIM",
+  },
+
   whatsappNumber: "5548999899681",
   whatsappDefaultMessage:
     "Olá! Vim pelo site e gostaria de falar com um engenheiro sobre um projeto.",
@@ -46,7 +53,6 @@ export const CTA_LABEL = "Falar com um engenheiro";
  * Flagship specialties (deep editorial blocks).
  * Imagery: illustrative stock (Unsplash), navy duotone — NOT client projects.
  * ppci: fire-protection valves/pumps (photo 1690973692388, Rose Galloway Green).
- * spda: lightning strike on a tower (photo 1681908113034, Timo Volz).
  */
 export const specialties = [
   {
@@ -69,25 +75,6 @@ export const specialties = [
       "Emissão de Atestado de Funcionamento",
       "Regularização de imóveis existentes",
       "Consultoria técnica",
-    ],
-  },
-  {
-    key: "spda",
-    num: "02",
-    tag: "SPDA",
-    title: "Proteção contra Descargas Atmosféricas",
-    icon: "ic-escudo", // TODO(CONTENT_PENDING) CNT-007 — dedicated SPDA icon
-    image: "/img/spda.jpg",
-    alt: "Raio atingindo o topo de um arranha-céu protegido por sistema de captação à noite.",
-    description:
-      "Sistema de proteção contra descargas atmosféricas conforme NBR 5419, do levantamento de risco ao projeto executivo.",
-    deliverables: [
-      "Análise e gerenciamento de risco (NBR 5419)",
-      "Memorial e dimensionamento",
-      "Pranchas e detalhamentos técnicos",
-      "ART de projeto",
-      "Adequações e acompanhamentos",
-      "Laudos e vistorias",
     ],
   },
 ] as const;

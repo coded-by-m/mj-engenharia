@@ -41,7 +41,9 @@ export function Sobre() {
             {[
               ["Responsável técnico", site.legalLead],
               ["Registro profissional", site.crea],
-              ["Área projetada", "+100 mil m²"],
+              ["Projetos", site.metrics.projects],
+              ["Área projetada", site.metrics.area],
+              ["Metodologia", site.metrics.method],
               ["Atuação", site.region],
               ["Normas", "NBR 5419 · IN do CBMSC"],
             ].map(([k, v]) => (

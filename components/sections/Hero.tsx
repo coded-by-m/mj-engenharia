@@ -62,12 +62,12 @@ export function Hero() {
                   <dd className="mt-1 text-white">{site.crea}</dd>
                 </div>
                 <div>
-                  <dt className="kicker text-white/45">Norma SPDA</dt>
-                  <dd className="mt-1 text-white">NBR 5419</dd>
+                  <dt className="kicker text-white/45">Projetos</dt>
+                  <dd className="mt-1 text-white">{site.metrics.projects}</dd>
                 </div>
                 <div>
-                  <dt className="kicker text-white/45">Aprovação</dt>
-                  <dd className="mt-1 text-white">CBMSC/NBRs</dd>
+                  <dt className="kicker text-white/45">Área projetada</dt>
+                  <dd className="mt-1 text-white">{site.metrics.area}</dd>
                 </div>
               </dl>
             </div>

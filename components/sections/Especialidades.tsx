@@ -10,11 +10,10 @@ export function Especialidades() {
     <Section id="especialidades" variant="light" space="loose">
       <SectionHeader
         num="01"
-        kicker="Especialidades"
-        title="Duas frentes, uma assinatura técnica"
+        kicker="Especialidade"
+        title="Uma frente, uma assinatura técnica"
       >
-        Foco em projeto. PPCI e SPDA são o centro do trabalho, não um item de
-        lista.
+        Foco em projeto. PPCI é o centro do trabalho, não um item de lista.
       </SectionHeader>
 
       <div className="mt-16 space-y-20 lg:space-y-28">
