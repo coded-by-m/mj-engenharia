@@ -8,6 +8,10 @@ import type { projects } from "@/lib/site";
 
 type Project = (typeof projects)[number];
 
+// Crossfade for the stacked media layers (ease-out-quint); off under reduced motion.
+const FADE =
+  "transition-opacity duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none";
+
 /**
  * One project block. A single media viewer carries every visual: slide 0 is the
  * interactive Arquitetura/PPCI x-ray slider, the rest are equipment/valve
@@ -39,10 +43,12 @@ export function ProjectShowcase({
         className={`lg:col-span-7 ${imageRight ? "lg:order-2" : "lg:order-1"}`}
       >
         <div className="group/media relative aspect-[16/10] overflow-hidden rounded-[var(--radius-lg)] border border-line bg-brand-drench">
-          {/* The x-ray slider stays mounted so its position + intro persist; the
-              detail photos overlay it when active. */}
+          {/* All media are stacked layers that crossfade by opacity. The x-ray
+              slider stays mounted so its position + intro persist across paging. */}
           <div
-            className={`absolute inset-0 ${active === 0 ? "" : "invisible"}`}
+            className={`absolute inset-0 ${FADE} ${
+              active === 0 ? "opacity-100" : "pointer-events-none opacity-0"
+            }`}
             aria-hidden={active !== 0}
           >
             <ProjectCompare
@@ -54,18 +60,22 @@ export function ProjectShowcase({
             />
           </div>
 
-          {photos.map((d, k) =>
-            active === k + 1 ? (
+          {photos.map((d, k) => {
+            const on = active === k + 1;
+            return (
               <Image
                 key={d.src}
                 src={d.src}
                 alt={d.label}
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
-                className="absolute inset-0 object-cover"
+                aria-hidden={!on}
+                className={`absolute inset-0 object-cover ${FADE} ${
+                  on ? "opacity-100" : "pointer-events-none opacity-0"
+                }`}
               />
-            ) : null
-          )}
+            );
+          })}
 
           {total > 1 && (
             <>
