@@ -16,51 +16,64 @@ export function Projetos() {
         caso. Nomes e locais preservados.
       </SectionHeader>
 
-      <div className="mt-16 flex flex-col gap-20 lg:gap-28">
+      <div className="mt-16 flex flex-col gap-16 lg:gap-24">
         {projects.map((p, i) => {
           const imageRight = i % 2 === 1;
           return (
             <Reveal key={p.id}>
-              <article className="grid items-start gap-x-10 gap-y-8 lg:grid-cols-2">
-                {/* Visual column */}
-                <div className={imageRight ? "lg:order-2" : "lg:order-1"}>
+              <article className="grid gap-x-12 gap-y-8 lg:grid-cols-12">
+                {/* Visual column — the star, gets the wider track */}
+                <div
+                  className={`lg:col-span-7 ${imageRight ? "lg:order-2" : "lg:order-1"}`}
+                >
                   <ProjectViewer
                     arq={p.images.arq}
                     ppci={p.images.ppci}
                     alt={p.alt}
+                    sizes="(max-width: 1024px) 100vw, 58vw"
                     priority={i === 0}
                   />
-                  <DetailGallery items={p.details} />
                 </div>
 
-                {/* Info column */}
-                <div className={imageRight ? "lg:order-1" : "lg:order-2"}>
-                  <p className="idx text-sm text-muted">
-                    Projeto {String(i + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-1 text-2xl text-brand-deep">{p.name}</h3>
+                {/* Info column — stretches to viewer height; detail strip
+                    anchors the bottom so there's no dead space below the text */}
+                <div
+                  className={`flex h-full flex-col justify-between gap-10 lg:col-span-5 ${
+                    imageRight ? "lg:order-1" : "lg:order-2"
+                  }`}
+                >
+                  <div>
+                    <p className="idx text-sm text-muted">
+                      Projeto {String(i + 1).padStart(2, "0")}
+                    </p>
+                    <h3 className="mt-1 text-2xl text-brand-deep lg:text-[1.75rem]">
+                      {p.name}
+                    </h3>
 
-                  <dl className="mt-6 flex flex-wrap gap-x-10 gap-y-4 border-y border-line py-5">
-                    <div>
-                      <dt className="kicker text-muted">Ocupação</dt>
-                      <dd className="mt-1 text-brand-deep">{p.occupancy}</dd>
-                    </div>
-                    <div>
-                      <dt className="kicker text-muted">Área de projeto</dt>
-                      <dd className="mt-1 text-brand-deep">{p.area}</dd>
-                    </div>
-                    <div>
-                      <dt className="kicker text-muted">Pavimentos</dt>
-                      <dd className="mt-1 text-brand-deep">{p.floors}</dd>
-                    </div>
-                  </dl>
+                    <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-y border-line py-6">
+                      <div className="col-span-2">
+                        <dt className="kicker text-muted">Ocupação</dt>
+                        <dd className="mt-1 text-brand-deep">{p.occupancy}</dd>
+                      </div>
+                      <div>
+                        <dt className="kicker text-muted">Área de projeto</dt>
+                        <dd className="mt-1 text-brand-deep">{p.area}</dd>
+                      </div>
+                      <div>
+                        <dt className="kicker text-muted">Pavimentos</dt>
+                        <dd className="mt-1 text-brand-deep">{p.floors}</dd>
+                      </div>
+                    </dl>
 
-                  <div className="mt-6">
-                    <SystemsList
-                      highlight={p.systems.highlight}
-                      rest={p.systems.rest}
-                    />
+                    <div className="mt-6">
+                      <SystemsList
+                        highlight={p.systems.highlight}
+                        rest={p.systems.rest}
+                      />
+                    </div>
                   </div>
+
+                  <DetailGallery items={p.details} />
                 </div>
               </article>
             </Reveal>
