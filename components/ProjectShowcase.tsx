@@ -169,7 +169,7 @@ function MediaArrow({
       type="button"
       onClick={onClick}
       aria-label={side === "left" ? "Mídia anterior" : "Próxima mídia"}
-      className={`absolute top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-brand-deep/75 text-white opacity-0 backdrop-blur-sm transition-[opacity,transform] hover:scale-105 focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white group-hover/media:opacity-100 group-focus-within/media:opacity-100 lg:grid ${
+      className={`absolute top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-brand-deep/75 text-white opacity-0 backdrop-blur-sm transition-[opacity,transform] pointer-events-none hover:scale-105 focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white group-hover/media:pointer-events-auto group-hover/media:opacity-100 group-focus-within/media:pointer-events-auto group-focus-within/media:opacity-100 lg:grid ${
         side === "left" ? "left-3" : "right-3"
       }`}
     >
