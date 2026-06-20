@@ -1,0 +1,16 @@
+Ocupação da edificação: Escola Geral (E-1)
+Área de projeto preventivo: 11.811,60 m²
+Nº de pavimentos: 3 pavimentos
+Sistemas do projeto preventivo
+I. Sistema Preventivo por Extintores;
+II. Sistema Hidráulico Preventivo;
+III. Sistema de Saídas de Emergência;
+IV. Sistema de Iluminação de Emergência;
+V. Sinalização para Abandono do Local;
+VI. Sistema de alarme e detecção;
+VII. Brigadista de Incêndio Voluntário;
+VIII. Controle de Materiais e Acabamento;
+IX. Acesso de viatura na edificação;
+X. Instalações de Baixa Tensão;
+XI. Proteção Estrutural (TRRF)
+XII. Sistema de GLP

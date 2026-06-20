@@ -119,55 +119,126 @@ export const services = [
 ] as const;
 
 /**
- * Completed projects — track record. Anonymized: no client name or city
- * (DEC: anonimizar). Each entry renders a duotone prancha when `image` is set,
- * otherwise an engineering-blueprint placeholder keyed by `icon`.
+ * Completed projects — track record. Anonymized: generic occupancy type only,
+ * no client name or city (DEC: anonimizar). Metrics (ocupação, área, pavimentos)
+ * and system lists are REAL, from the client's project briefs.
  *
- * TODO(CONTENT_PENDING) CNT-010 — confirm real metrics (ano, porte, resultado)
- * with the client. Values below are realistic placeholders. Project 01 has real
- * drawings: save them to /public/img/projetos/projeto-01-ppci.jpg and set
- * `image` to that path (duotone navy is applied in CSS).
+ * Each project carries a paired BIM render: `arq` (architectural model) and
+ * `ppci` (the isolated fire-protection network). The <ProjectViewer> crossfades
+ * between them. `details` are supporting equipment/valve renders.
+ * Images live in /public/img/projetos (see scripts/optimize-projetos.mjs).
  */
 export const projects = [
   {
-    tag: "PPCI",
-    segment: "Edifício comercial",
-    icon: "ic-empresa",
-    year: "2024",
-    size: "4.200 m²",
-    result: "Aprovado no CBMSC",
-    image: null as string | null,
-    alt: "Prancha técnica de PPCI: central de gás, rede de hidrantes e detalhamento de sinalização de emergência.",
+    id: "centro-comercial",
+    name: "Centro comercial",
+    occupancy: "Comercial · C-2",
+    area: "7.837 m²",
+    floors: "4 pavimentos",
+    images: {
+      arq: "/img/projetos/projeto-01-arq.jpg",
+      ppci: "/img/projetos/projeto-01-ppci.jpg",
+    },
+    alt: {
+      arq: "Modelo BIM da arquitetura do centro comercial — estrutura, fachada e cobertura.",
+      ppci: "Rede do projeto preventivo do centro comercial — tubulação de hidrantes e chuveiros automáticos, reservatórios e central de GLP.",
+    },
+    systems: {
+      highlight: [
+        "Chuveiros automáticos",
+        "Hidrantes",
+        "Alarme e detecção",
+        "Iluminação de emergência",
+        "Compartimentação horizontal",
+        "Central de GLP",
+      ],
+      rest: [
+        "Extintores",
+        "Saídas de emergência",
+        "Sinalização de abandono",
+        "Brigada de incêndio",
+        "Controle de materiais e acabamento",
+        "Acesso de viatura",
+        "Instalações de baixa tensão",
+        "Proteção estrutural (TRRF)",
+      ],
+    },
+    details: [
+      { src: "/img/projetos/projeto-01-equip-1.jpg", label: "Equipamentos gerais" },
+      { src: "/img/projetos/projeto-01-equip-2.jpg", label: "Válvulas de governo e alarme" },
+    ],
   },
   {
-    tag: "SPDA",
-    segment: "Galpão industrial",
-    icon: "ic-galpao",
-    year: "2023",
-    size: "9.800 m²",
-    result: "Projeto executivo entregue",
-    image: null as string | null,
-    alt: "",
+    id: "edificacao-publica",
+    name: "Edificação pública",
+    occupancy: "Edificação pública · H-4",
+    area: "15.390 m²",
+    floors: "5 pavimentos",
+    images: {
+      arq: "/img/projetos/projeto-02-arq.jpg",
+      ppci: "/img/projetos/projeto-02-ppci.jpg",
+    },
+    alt: {
+      arq: "Modelo BIM da arquitetura da edificação pública — estrutura e vedações em corte.",
+      ppci: "Rede do projeto preventivo da edificação pública — prumadas e ramais de hidrantes com reservatórios elevados.",
+    },
+    systems: {
+      highlight: [
+        "Hidrantes",
+        "Alarme e detecção",
+        "Iluminação de emergência",
+        "Saídas de emergência",
+        "Compartimentação vertical",
+        "Proteção estrutural (TRRF)",
+      ],
+      rest: [
+        "Extintores",
+        "Sinalização de abandono",
+        "Brigada de incêndio",
+        "Controle de materiais e acabamento",
+        "Acesso de viatura",
+        "Instalações de baixa tensão",
+      ],
+    },
+    details: [
+      { src: "/img/projetos/projeto-02-equip-1.jpg", label: "Equipamentos gerais" },
+    ],
   },
   {
-    tag: "PPCI",
-    segment: "Condomínio residencial",
-    icon: "ic-condominio",
-    year: "2024",
-    size: "6.500 m²",
-    result: "Aprovado no CBMSC",
-    image: null as string | null,
-    alt: "",
-  },
-  {
-    tag: "PPCI + SPDA",
-    segment: "Centro logístico",
-    icon: "ic-projeto",
-    year: "2023",
-    size: "12.000 m²",
-    result: "Aprovado no CBMSC",
-    image: null as string | null,
-    alt: "",
+    id: "escola",
+    name: "Escola",
+    occupancy: "Escola · E-1",
+    area: "11.811 m²",
+    floors: "3 pavimentos",
+    images: {
+      arq: "/img/projetos/projeto-03-arq.jpg",
+      ppci: "/img/projetos/projeto-03-ppci.jpg",
+    },
+    alt: {
+      arq: "Modelo BIM da arquitetura da escola — blocos de salas, circulação e cobertura.",
+      ppci: "Rede do projeto preventivo da escola — tubulação de hidrantes, pontos de combate e reservatório.",
+    },
+    systems: {
+      highlight: [
+        "Hidrantes",
+        "Alarme e detecção",
+        "Iluminação de emergência",
+        "Saídas de emergência",
+        "Proteção estrutural (TRRF)",
+        "Central de GLP",
+      ],
+      rest: [
+        "Extintores",
+        "Sinalização de abandono",
+        "Brigada de incêndio",
+        "Controle de materiais e acabamento",
+        "Acesso de viatura",
+        "Instalações de baixa tensão",
+      ],
+    },
+    details: [
+      { src: "/img/projetos/projeto-03-equip-1.jpg", label: "Equipamentos" },
+    ],
   },
 ] as const;
 

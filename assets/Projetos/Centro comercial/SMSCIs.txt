@@ -1,0 +1,18 @@
+Ocupação da edificação: Comercial com média carga de incêndio (c-2)
+Área de projeto preventivo: 7.837,32 m²
+Nº de pavimentos: 4 pavimentos
+Sistemas do projeto preventivo do centro comercial
+I. Sistema Preventivo por Extintores;
+II. Sistema Hidráulico Preventivo;
+III. Chuveiros automáticos
+IV. Sistema de Saídas de Emergência;
+V. Sistema de Iluminação de Emergência;
+VI. Sinalização para Abandono do Local;
+VII. Sistema de alarme e detecção;
+VIII. Brigadista de Incêndio Voluntário;
+IX. Controle de Materiais e Acabamento;
+X. Acesso de viatura na edificação;
+XI. Instalações de Baixa Tensão;
+XII. Proteção Estrutural (TRRF)
+XIV. Compartimentação Horizontal
+XV. Sistema de Instalação de Gás Combustível - GLP

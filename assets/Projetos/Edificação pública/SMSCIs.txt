@@ -1,0 +1,16 @@
+Ocupação da edificação: Edificação pública (H-4)
+Área de projeto preventivo: 15.390,90 m²
+Nº de pavimentos: 5 pavimentos
+Sistemas do projeto preventivo do centro comercial
+I. Sistema preventivo por extintores;
+II. Sistema hidráulico preventivo;
+III. Sistema de saídas de emergência;
+IV. Sistema de iluminação de emergência;
+V. Sinalização para abandono do local;
+VI. Sistema de alarme e detecção;
+VII. Brigadista de incêndio voluntário;
+VIII. Controle de materiais e acabamento;
+IX. Acesso de viatura na edificação;
+X. Instalações de baixa tensão;
+XI. Compartimentação vertical
+XII. Proteção estrutural (TRRF)
