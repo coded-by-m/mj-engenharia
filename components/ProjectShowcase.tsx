@@ -38,8 +38,13 @@ export function ProjectShowcase({
       <div
         className={`lg:col-span-7 ${imageRight ? "lg:order-2" : "lg:order-1"}`}
       >
-        <div className="relative">
-          {active === 0 ? (
+        <div className="group/media relative aspect-[16/10] overflow-hidden rounded-[var(--radius-lg)] border border-line bg-brand-drench">
+          {/* The x-ray slider stays mounted so its position + intro persist; the
+              detail photos overlay it when active. */}
+          <div
+            className={`absolute inset-0 ${active === 0 ? "" : "invisible"}`}
+            aria-hidden={active !== 0}
+          >
             <ProjectCompare
               before={p.images.arq}
               after={p.images.xray}
@@ -47,16 +52,19 @@ export function ProjectShowcase({
               sizes="(max-width: 1024px) 100vw, 58vw"
               priority={index === 0}
             />
-          ) : (
-            <div className="relative aspect-[16/10] overflow-hidden rounded-[var(--radius-lg)] border border-line bg-brand-drench">
+          </div>
+
+          {photos.map((d, k) =>
+            active === k + 1 ? (
               <Image
-                src={photos[active - 1].src}
-                alt={photos[active - 1].label}
+                key={d.src}
+                src={d.src}
+                alt={d.label}
                 fill
                 sizes="(max-width: 1024px) 100vw, 58vw"
-                className="object-cover"
+                className="absolute inset-0 object-cover"
               />
-            </div>
+            ) : null
           )}
 
           {total > 1 && (
@@ -91,15 +99,15 @@ export function ProjectShowcase({
 
           <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 border-y border-line py-6">
             <div className="col-span-2">
-              <dt className="kicker text-muted">Ocupação</dt>
+              <dt className="text-xs text-muted">Ocupação</dt>
               <dd className="mt-1 text-brand-deep">{p.occupancy}</dd>
             </div>
             <div>
-              <dt className="kicker text-muted">Área de projeto</dt>
+              <dt className="text-xs text-muted">Área de projeto</dt>
               <dd className="mt-1 text-brand-deep">{p.area}</dd>
             </div>
             <div>
-              <dt className="kicker text-muted">Pavimentos</dt>
+              <dt className="text-xs text-muted">Pavimentos</dt>
               <dd className="mt-1 text-brand-deep">{p.floors}</dd>
             </div>
           </dl>
@@ -151,7 +159,7 @@ function MediaArrow({
       type="button"
       onClick={onClick}
       aria-label={side === "left" ? "Mídia anterior" : "Próxima mídia"}
-      className={`absolute top-1/2 z-20 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-brand-deep/75 text-white backdrop-blur-sm transition-transform hover:scale-105 focus-visible:scale-105 ${
+      className={`absolute top-1/2 z-20 hidden h-11 w-11 -translate-y-1/2 place-items-center rounded-full border border-white/25 bg-brand-deep/75 text-white opacity-0 backdrop-blur-sm transition-[opacity,transform] hover:scale-105 focus-visible:opacity-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white group-hover/media:opacity-100 group-focus-within/media:opacity-100 lg:grid ${
         side === "left" ? "left-3" : "right-3"
       }`}
     >
@@ -185,7 +193,7 @@ function MediaThumb({
       onClick={onClick}
       aria-label={`Ver: ${label}`}
       aria-current={active}
-      className="group/thumb w-24 text-left"
+      className="group/thumb w-24 rounded-[var(--radius-sm)] text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
     >
       <div
         className={`relative aspect-[16/10] overflow-hidden rounded-[var(--radius-sm)] border bg-brand-drench transition-colors ${
