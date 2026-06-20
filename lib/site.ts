@@ -123,9 +123,11 @@ export const services = [
  * no client name or city (DEC: anonimizar). Metrics (ocupação, área, pavimentos)
  * and system lists are REAL, from the client's project briefs.
  *
- * Each project carries a paired BIM render: `arq` (architectural model) and
- * `ppci` (the isolated fire-protection network). The <ProjectViewer> crossfades
- * between them. `details` are supporting equipment/valve renders.
+ * Each project carries BIM renders from the same camera: `arq` (architectural
+ * model), `ppci` (the isolated fire-protection network) and `xray` (arq dimmed
+ * with the network composited on top — see scripts/generate-xray.mjs). The
+ * <ProjectCompare> wipe slider reveals `xray` over `arq`. `details` are
+ * supporting equipment/valve renders.
  * Images live in /public/img/projetos (see scripts/optimize-projetos.mjs).
  */
 export const projects = [
@@ -138,6 +140,7 @@ export const projects = [
     images: {
       arq: "/img/projetos/projeto-01-arq.jpg",
       ppci: "/img/projetos/projeto-01-ppci.jpg",
+      xray: "/img/projetos/projeto-01-xray.jpg",
     },
     alt: {
       arq: "Modelo BIM da arquitetura do centro comercial — estrutura, fachada e cobertura.",
@@ -177,6 +180,7 @@ export const projects = [
     images: {
       arq: "/img/projetos/projeto-02-arq.jpg",
       ppci: "/img/projetos/projeto-02-ppci.jpg",
+      xray: "/img/projetos/projeto-02-xray.jpg",
     },
     alt: {
       arq: "Modelo BIM da arquitetura da edificação pública — estrutura e vedações em corte.",
@@ -213,6 +217,7 @@ export const projects = [
     images: {
       arq: "/img/projetos/projeto-03-arq.jpg",
       ppci: "/img/projetos/projeto-03-ppci.jpg",
+      xray: "/img/projetos/projeto-03-xray.jpg",
     },
     alt: {
       arq: "Modelo BIM da arquitetura da escola — blocos de salas, circulação e cobertura.",

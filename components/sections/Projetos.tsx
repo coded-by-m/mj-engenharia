@@ -2,7 +2,7 @@ import { Section } from "@/components/Section";
 import { SectionHeader } from "@/components/SectionHeader";
 import { WhatsAppCTA } from "@/components/WhatsAppCTA";
 import { Reveal } from "@/components/Reveal";
-import { ProjectViewer } from "@/components/ProjectViewer";
+import { ProjectCompare } from "@/components/ProjectCompare";
 import { SystemsList } from "@/components/SystemsList";
 import { DetailGallery } from "@/components/DetailGallery";
 import { projects } from "@/lib/site";
@@ -12,8 +12,8 @@ export function Projetos() {
     <Section id="projetos" variant="alt">
       <SectionHeader num="06" kicker="Casos" title="Da prancha ao carimbo">
         Projetamos a obra em BIM e desenhamos dentro dela a rede de segurança que
-        ninguém vê. Alterne entre a arquitetura e o sistema preventivo de cada
-        caso. Nomes e locais preservados.
+        ninguém vê. Arraste a barra para revelar o sistema preventivo dentro de
+        cada projeto. Nomes e locais preservados.
       </SectionHeader>
 
       <div className="mt-16 flex flex-col gap-16 lg:gap-24">
@@ -26,10 +26,10 @@ export function Projetos() {
                 <div
                   className={`lg:col-span-7 ${imageRight ? "lg:order-2" : "lg:order-1"}`}
                 >
-                  <ProjectViewer
-                    arq={p.images.arq}
-                    ppci={p.images.ppci}
-                    alt={p.alt}
+                  <ProjectCompare
+                    before={p.images.arq}
+                    after={p.images.xray}
+                    alt={{ before: p.alt.arq, after: p.alt.ppci }}
                     sizes="(max-width: 1024px) 100vw, 58vw"
                     priority={i === 0}
                   />
