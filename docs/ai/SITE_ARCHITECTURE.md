@@ -17,12 +17,12 @@
 ## Page Architecture
 
 ### Home (single page)
-- Objective: convert to WhatsApp around PPCI/SPDA projects.
+- Objective: convert to WhatsApp around PPCI projects.
 - Sections (in order):
   1. **Header fixo** — logo, anchors, WhatsApp CTA.
   2. **Hero** — project-focused headline, subhead, primary WhatsApp CTA, CREA/engineer seal, real image + navy overlay.
-  3. **Especialidades** — two flagship anchor blocks: **PPCI** and **SPDA**, each listing deliverables (memorial, dimensionamento, ART, pranchas, aprovação CBMSC).
-  4. **Soluções** — grid of service cards (brand linear icons): Projeto PPCI, Projeto SPDA, Sprinkler, Extintores, Rota de fuga, Consultoria + (secondary) Laudo/Regularização/AVCB.
+  3. **Especialidades** — flagship anchor block: **PPCI**, listing deliverables (memorial, dimensionamento, ART, pranchas, aprovação CBMSC).
+  4. **Soluções** — grid of service cards (brand linear icons): Projeto PPCI, Sprinkler, Extintores, Rota de fuga, Consultoria + (secondary) Laudo/Regularização/AVCB.
   5. **Faixa CTA intermediária** — "Do projeto à aprovação no CBMSC, cuidamos de tudo." + WhatsApp CTA.
   6. **Quem Somos** — Eng. Milton Chagas, CREA, valores, atuação Grande Floripa, photo.
   7. **Diferenciais** — grid of cards w/ icons: atendimento direto com engenheiro, rigor técnico e normativo, soluções completas, compromisso com prazos, atuação regional.
@@ -38,7 +38,7 @@
 | Section | Visitor question answered | Intent |
 |---|---|---|
 | Hero | "What do they do, for me?" | Promise + immediate CTA |
-| Especialidades | "Are they specialists in PPCI/SPDA?" | Authority via depth |
+| Especialidades | "Are they specialists in PPCI?" | Authority via depth |
 | Soluções | "Do they cover what I need?" | Scope coverage |
 | Faixa CTA | (momentum) | Re-offer conversion |
 | Quem Somos | "Who signs this? Trustworthy?" | Credibility |
@@ -52,9 +52,9 @@
 Primary: any WhatsApp CTA → `wa.me/<number>?text=<pre-filled>`. CTAs appear in header, hero, intermediate band, final CTA, footer, and floating button. Secondary: contact form → lead. The visitor should never be more than one screen away from a conversion action.
 
 ## SEO / Accessibility / Performance Requirements
-- One coherent H1 (hero) mentioning PPCI/SPDA + region.
+- One coherent H1 (hero) mentioning PPCI + region.
 - Section H2s; semantic landmarks (`header`, `main`, `section`, `footer`).
-- Local SEO: PPCI, SPDA, projeto preventivo, AVCB, Grande Florianópolis / SC.
+- Local SEO: PPCI, projeto preventivo, AVCB, Grande Florianópolis / SC.
 - Metadata: title, description, Open Graph, favicon set (provided).
 - Schema.org `LocalBusiness` / `ProfessionalService`.
 - Accessibility: keyboard nav, visible focus, alt text, reduced motion, contrast AA (navy/white = strong).

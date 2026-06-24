@@ -9,14 +9,14 @@ export function Sobre() {
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
           <div className="flex items-center gap-3 text-muted">
-            <span className="idx text-sm text-accent">04</span>
+            <span className="idx text-sm text-accent">05</span>
             <span className="hairline w-10" />
             <span className="kicker">Sobre</span>
           </div>
           <Reveal delay={60}>
             <p className="display mt-6 text-2xl leading-snug text-brand-deep sm:text-3xl lg:text-[2.6rem]">
               A {site.name} nasce de uma ideia simples: projeto preventivo é
-              engenharia, não papelada. Cada PPCI e cada SPDA sai dimensionado,
+              engenharia, não papelada. Cada PPCI sai dimensionado,
               documentado e{" "}
               <span className="text-accent">acompanhado até a aprovação</span>.
             </p>
@@ -24,8 +24,8 @@ export function Sobre() {
           <Reveal delay={140}>
             <p className="mt-6 max-w-xl text-muted">
               Conduzida pelo {site.legalLead}, com atuação dedicada à prevenção
-              contra incêndio e à proteção contra descargas atmosféricas na{" "}
-              {site.region}. Você fala direto com quem assina.
+              contra incêndio na {site.region}. Você fala direto com quem
+              assina.
             </p>
           </Reveal>
           <Reveal delay={200}>
@@ -45,7 +45,7 @@ export function Sobre() {
               ["Área projetada", site.metrics.area],
               ["Metodologia", site.metrics.method],
               ["Atuação", site.region],
-              ["Normas", "NBR 5419 · IN do CBMSC"],
+              ["Normas", "Instruções Normativas do CBMSC"],
             ].map(([k, v]) => (
               <div
                 key={k}

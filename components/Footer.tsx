@@ -15,7 +15,7 @@ export function Footer() {
               className="h-11 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed">
-              Engenharia preventiva: projetos de PPCI e SPDA na{" "}
+              Engenharia preventiva: projetos de PPCI na{" "}
               {site.region}.
             </p>
             <p className="mt-3 text-sm">

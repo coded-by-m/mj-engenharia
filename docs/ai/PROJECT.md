@@ -6,14 +6,13 @@
 MJ Engenharia — Eng. Civil Milton Chagas. Preventive-engineering firm, Greater Florianópolis / SC.
 
 ## Business
-Engineering projects with a preventive focus. Flagship offerings:
+Engineering projects with a preventive focus. Flagship offering:
 - **Projeto de PPCI** — Plano/Projeto de Prevenção e Proteção Contra Incêndio.
-- **Projeto de SPDA** — Sistema de Proteção contra Descargas Atmosféricas.
 
 Complementary: sprinklers, extintores, rota de fuga, consultoria técnica, and (secondary) laudo / regularização / AVCB.
 
 ## Offer
-"Projetos de engenharia preventiva (PPCI e SPDA) com assinatura de engenheiro — do dimensionamento à aprovação no CBMSC." Specialist, not generalist.
+"Projetos de engenharia preventiva (PPCI) com assinatura de engenheiro — do dimensionamento à aprovação no CBMSC." Specialist, not generalist.
 
 ## Primary Conversion
 WhatsApp conversation via "Falar com um engenheiro" (`wa.me` deep link, pre-filled message). Secondary: contact form.
@@ -24,13 +23,13 @@ WhatsApp conversation via "Falar com um engenheiro" (`wa.me` deep link, pre-fill
 Decision-maker responsible for a building/operation that needs a preventive project: industry/company manager, condo síndico, shop owner, or construtora.
 
 ### Need
-A correct, approvable PPCI/SPDA project signed by an engineer, with follow-through to approval.
+A correct, approvable PPCI project signed by an engineer, with follow-through to approval.
 
 ### Entry source
-Local search (PPCI/SPDA/AVCB + Florianópolis region), social profiles, referral, or paid traffic.
+Local search (PPCI/AVCB + Florianópolis region), social profiles, referral, or paid traffic.
 
 ### Expected path
-Hero → Especialidades (PPCI/SPDA) → Soluções → recognize segment → Quem Somos / Diferenciais → Projetos (proof) → FAQ → WhatsApp.
+Hero → Especialidades (PPCI) → Soluções → recognize segment → Quem Somos / Diferenciais → Projetos (proof) → FAQ → WhatsApp.
 
 ### Main objections
 - "Será que entendem do meu tipo de imóvel?" → Segments section.
@@ -42,7 +41,7 @@ Hero → Especialidades (PPCI/SPDA) → Soluções → recognize segment → Que
 Click WhatsApp CTA (header, hero, intermediate band, final CTA, floating button) or submit contact form.
 
 ### Abandonment risks
-Generic look that reads as non-specialist; unclear scope of PPCI vs SPDA; visible placeholders; slow load on mobile; CTA not always reachable.
+Generic look that reads as non-specialist; unclear scope of the PPCI offering; visible placeholders; slow load on mobile; CTA not always reachable.
 
 ## Content Status
 Identity/design assets: available. Project photos, metrics, testimonials, contact data: pending (see `CONTENT_PENDING.md`).

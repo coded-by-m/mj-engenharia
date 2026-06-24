@@ -10,7 +10,7 @@ export function Contato() {
     <Section id="contato" variant="alt">
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
-          <SectionHeader num="08" kicker="Contato" title="Fale com um engenheiro">
+          <SectionHeader num="09" kicker="Contato" title="Fale com um engenheiro">
             Prefere conversar agora? Chame no WhatsApp. Ou envie seus dados pelo
             formulário.
           </SectionHeader>
@@ -46,11 +46,36 @@ export function Contato() {
             </dl>
           </Reveal>
 
-          {/* Map placeholder — CNT-003 (real address / embed) */}
+          {/* Área de atuação — self-hosted region map (no third-party JS or
+              cookies; LGPD-safe). Official IBGE outline of the Grande
+              Florianópolis mesoregion, recolored to brand navy over a faint
+              technical dot grid. Reinforces the "Atuação" credential without
+              restating it. Exact office address is still CNT-003. */}
           <Reveal delay={220}>
-            <div className="mt-8 flex aspect-[16/9] items-center justify-center rounded-[var(--radius-md)] border border-dashed border-line bg-surface text-sm text-muted">
-              Mapa da área de atuação — a definir
-            </div>
+            <figure className="mt-8 overflow-hidden rounded-[var(--radius-md)] border border-line bg-surface-alt">
+              <div
+                className="relative flex aspect-[16/9] w-full items-center justify-center p-8 sm:p-10"
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle, color-mix(in oklab, var(--color-brand) 10%, transparent) 1px, transparent 1px)",
+                  backgroundSize: "18px 18px",
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/img/area-grande-florianopolis.svg"
+                  alt={`Mapa da área de atuação: ${site.region}`}
+                  loading="lazy"
+                  width={300}
+                  height={247}
+                  className="max-h-full w-auto drop-shadow-sm"
+                />
+                <span className="kicker absolute bottom-3 left-4 flex items-center gap-2 text-muted">
+                  <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                  Mesorregião · fonte IBGE
+                </span>
+              </div>
+            </figure>
           </Reveal>
         </div>
 

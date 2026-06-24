@@ -61,7 +61,7 @@ Base unit 4px. Scale: 4, 8, 12, 16, 24, 32, 48, 64, 96, 128. Section vertical pa
 - **Containers / Section headers:** eyebrow (Barlow Condensed) + H2 (Montserrat) + supporting line (Inter).
 - **Cards:** icon (brand SVG) + title + one-liner; border + hover elevation. Especialidades cards larger with deliverable list.
 - **Form fields:** labeled, comfortable height, visible focus, error states; dropdown for tipo de serviço.
-- **Tags/badges:** Barlow Condensed uppercase (e.g., "CREA", "PPCI", "SPDA", "NBR 5419").
+- **Tags/badges:** Barlow Condensed uppercase (e.g., "CREA", "PPCI", "AVCB").
 - **Floating WhatsApp button:** fixed, red, icon + label, accessible name.
 
 ## Responsive Principles
@@ -71,7 +71,6 @@ Mobile-first. Stacks to single column; CTAs become full-width; header collapses;
 - Logos/icons: use provided SVGs (`Identidade Visual/Logo/SVG`, `/Icones/SVG`).
 - Favicons/avatar: use provided sets.
 - Photography: real project photos preferred; until available use placeholders with navy overlay; meaningful alt text.
-- SPDA needs an icon (not in kit) → placeholder/derive; tracked in CONTENT_PENDING.
 
 ## Reference Principles
-Structure inspired by brandventuraengenharia.com.br, but elevated: stronger hierarchy, consistent grid/alignment, intentional whitespace, restrained color, specialist (PPCI/SPDA) framing instead of generalist. Avoid generic template aesthetics.
+Structure inspired by brandventuraengenharia.com.br, but elevated: stronger hierarchy, consistent grid/alignment, intentional whitespace, restrained color, specialist (PPCI) framing instead of generalist. Avoid generic template aesthetics.

@@ -10,11 +10,11 @@
 - [~] WhatsApp CTAs wired to `wa.me` with pre-filled message — number is placeholder (CNT-001).
 - [x] Floating WhatsApp button present and functional.
 - [x] Contact form composes WhatsApp message and opens chat (no backend yet).
-- [~] Placeholders are intentional and flagged (CONTENT_PENDING): images, metrics, CREA, contacts, SPDA icon.
+- [~] Placeholders are intentional and flagged (CONTENT_PENDING): images, metrics, CREA, contacts.
 
 ## Content integrity
 - [ ] No invented metrics, testimonials, CREA number or client proof.
-- [ ] PPCI and SPDA presented as flagship specialties.
+- [ ] PPCI presented as the flagship specialty.
 - [ ] Copy tone is project/competence-focused, not fear/legal.
 
 ## Responsive
@@ -33,7 +33,7 @@
 - [x] Contrast AA (navy/white, white-on-red CTA).
 
 ## SEO
-- [x] Page title and description (PPCI/SPDA + Grande Florianópolis).
+- [x] Page title and description (PPCI + Grande Florianópolis).
 - [x] One coherent H1.
 - [x] Open Graph + favicons.
 - [~] Schema.org ProfessionalService present; address/phone/CREA TODO (CNT-001/02/03).

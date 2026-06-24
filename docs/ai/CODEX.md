@@ -6,7 +6,7 @@ Read the documentation in `/docs/ai/` before implementation. Treat `MASTER_CONTE
 
 Key constraints:
 - Single-page landing for MJ Engenharia. Conversion = WhatsApp ("Falar com um engenheiro").
-- Flagship = projetos PPCI + SPDA. Tone = technical competence, not legal fear.
+- Flagship = projetos PPCI. Tone = technical competence, not legal fear.
 - Stack: Next.js (App Router) + Tailwind, `next/font`, `next/image`, Vercel.
 - Color discipline: navy base, red only on CTAs. Use brand SVGs/fonts from `Identidade Visual`.
 

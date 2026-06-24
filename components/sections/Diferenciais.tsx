@@ -11,7 +11,7 @@ export function Diferenciais() {
         <div className="grid gap-6 lg:grid-cols-12 lg:items-end">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-3 text-white/60">
-              <span className="idx text-sm text-accent">05</span>
+              <span className="idx text-sm text-accent">06</span>
               <span className="hairline w-10" />
               <span className="kicker">Por que a MJ</span>
             </div>

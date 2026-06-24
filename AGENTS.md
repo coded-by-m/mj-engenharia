@@ -14,4 +14,4 @@ Use these roles when delegating work:
 
 Full instructions: `/docs/ai/AGENTS.md`.
 Codex/OpenAI agents: `/docs/ai/CODEX.md`.
-Always read `/docs/ai/` before implementation. Conversion = WhatsApp; flagship = PPCI + SPDA; never invent client facts.
+Always read `/docs/ai/` before implementation. Conversion = WhatsApp; flagship = PPCI; never invent client facts.

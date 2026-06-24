@@ -10,7 +10,7 @@ export function Faq() {
 
   return (
     <Section id="faq" variant="light">
-      <SectionHeader num="07" kicker="Dúvidas" title="Perguntas comuns">
+      <SectionHeader num="08" kicker="Dúvidas" title="Perguntas comuns">
         Escopo, prazos e responsabilidade técnica dos projetos.
       </SectionHeader>
 

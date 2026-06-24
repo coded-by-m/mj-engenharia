@@ -11,16 +11,50 @@ function Label({ htmlFor, children }: { htmlFor: string; children: ReactNode }) 
   );
 }
 
+/** Hint (when valid) and error (when invalid) lines, wired for screen readers. */
+function FieldNote({ id, hint, error }: { id: string; hint?: string; error?: string }) {
+  if (error) {
+    return (
+      <p id={`${id}-error`} className="mt-1.5 text-xs font-medium text-accent">
+        {error}
+      </p>
+    );
+  }
+  if (hint) {
+    return (
+      <p id={`${id}-hint`} className="mt-1.5 text-xs text-muted">
+        {hint}
+      </p>
+    );
+  }
+  return null;
+}
+
+function describedBy(id: string, hint?: string, error?: string) {
+  return [error ? `${id}-error` : hint ? `${id}-hint` : null].filter(Boolean).join(" ") || undefined;
+}
+
+type FieldExtras = { hint?: string; error?: string };
+
 export function TextField({
   label,
   id,
+  hint,
+  error,
   className = "",
   ...rest
-}: { label: string } & InputHTMLAttributes<HTMLInputElement>) {
+}: { label: string } & FieldExtras & InputHTMLAttributes<HTMLInputElement>) {
   return (
     <div className={className}>
       <Label htmlFor={id!}>{label}</Label>
-      <input id={id} className={fieldBase} {...rest} />
+      <input
+        id={id}
+        className={`${fieldBase} ${error ? "border-accent" : ""}`}
+        {...rest}
+        aria-invalid={error ? true : undefined}
+        aria-describedby={describedBy(id!, hint, error)}
+      />
+      <FieldNote id={id!} hint={hint} error={error} />
     </div>
   );
 }
@@ -28,13 +62,22 @@ export function TextField({
 export function TextArea({
   label,
   id,
+  hint,
+  error,
   className = "",
   ...rest
-}: { label: string } & TextareaHTMLAttributes<HTMLTextAreaElement>) {
+}: { label: string } & FieldExtras & TextareaHTMLAttributes<HTMLTextAreaElement>) {
   return (
     <div className={className}>
       <Label htmlFor={id!}>{label}</Label>
-      <textarea id={id} className={`${fieldBase} min-h-32 resize-y`} {...rest} />
+      <textarea
+        id={id}
+        className={`${fieldBase} min-h-32 resize-y ${error ? "border-accent" : ""}`}
+        {...rest}
+        aria-invalid={error ? true : undefined}
+        aria-describedby={describedBy(id!, hint, error)}
+      />
+      <FieldNote id={id!} hint={hint} error={error} />
     </div>
   );
 }
@@ -42,16 +85,25 @@ export function TextArea({
 export function SelectField({
   label,
   id,
+  hint,
+  error,
   children,
   className = "",
   ...rest
-}: { label: string; children: ReactNode } & SelectHTMLAttributes<HTMLSelectElement>) {
+}: { label: string; children: ReactNode } & FieldExtras & SelectHTMLAttributes<HTMLSelectElement>) {
   return (
     <div className={className}>
       <Label htmlFor={id!}>{label}</Label>
-      <select id={id} className={`${fieldBase} appearance-none`} {...rest}>
+      <select
+        id={id}
+        className={`${fieldBase} appearance-none ${error ? "border-accent" : ""}`}
+        {...rest}
+        aria-invalid={error ? true : undefined}
+        aria-describedby={describedBy(id!, hint, error)}
+      >
         {children}
       </select>
+      <FieldNote id={id!} hint={hint} error={error} />
     </div>
   );
 }

@@ -7,7 +7,6 @@ import { whatsappUrl } from "@/lib/whatsapp";
 
 const serviceOptions = [
   "Projeto de PPCI",
-  "Projeto de SPDA",
   "Sprinklers",
   "Extintores e hidrantes",
   "Rotas de fuga",
@@ -17,6 +16,9 @@ const serviceOptions = [
 ];
 
 type Status = "idle" | "opened" | "blocked";
+type Errors = Partial<Record<"nome" | "telefone" | "email" | "servico", string>>;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
  * Secondary capture path (DEC-003). No backend yet: on submit, we compose a
@@ -30,15 +32,42 @@ type Status = "idle" | "opened" | "blocked";
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [waLink, setWaLink] = useState("");
+  const [errors, setErrors] = useState<Errors>({});
+
+  function clearError(field: keyof Errors) {
+    setErrors((prev) => {
+      if (!prev[field]) return prev;
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+  }
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const nome = String(data.get("nome") || "").trim();
     const email = String(data.get("email") || "").trim();
     const telefone = String(data.get("telefone") || "").trim();
     const servico = String(data.get("servico") || "").trim();
     const mensagem = String(data.get("mensagem") || "").trim();
+
+    // Validate inline (form is noValidate; we own the messages).
+    const next: Errors = {};
+    if (nome.length < 2) next.nome = "Informe seu nome.";
+    const digits = telefone.replace(/\D/g, "");
+    if (!telefone) next.telefone = "Informe um telefone para contato.";
+    else if (digits.length < 10) next.telefone = "Inclua DDD e número, ex.: (48) 99999-9999.";
+    if (!servico) next.servico = "Selecione um tipo de serviço.";
+    if (email && !EMAIL_RE.test(email)) next.email = "E-mail inválido. Confira o endereço.";
+
+    setErrors(next);
+    if (Object.keys(next).length > 0) {
+      const first = ["nome", "telefone", "servico", "email"].find((k) => k in next);
+      if (first) (form.querySelector(`#${first}`) as HTMLElement | null)?.focus();
+      return;
+    }
 
     // Only include lines that actually have content.
     const text = [
@@ -59,7 +88,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="grid gap-4">
+    <form onSubmit={handleSubmit} noValidate className="grid gap-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <TextField
           id="nome"
@@ -68,6 +97,8 @@ export function ContactForm() {
           required
           maxLength={80}
           autoComplete="name"
+          error={errors.nome}
+          onChange={() => clearError("nome")}
         />
         <TextField
           id="telefone"
@@ -77,6 +108,9 @@ export function ContactForm() {
           required
           maxLength={30}
           autoComplete="tel"
+          hint="Com DDD, ex.: (48) 99999-9999."
+          error={errors.telefone}
+          onChange={() => clearError("telefone")}
         />
       </div>
       <TextField
@@ -86,6 +120,9 @@ export function ContactForm() {
         type="email"
         maxLength={120}
         autoComplete="email"
+        hint="Opcional."
+        error={errors.email}
+        onChange={() => clearError("email")}
       />
       <SelectField
         id="servico"
@@ -93,6 +130,8 @@ export function ContactForm() {
         label="Tipo de serviço"
         defaultValue=""
         required
+        error={errors.servico}
+        onChange={() => clearError("servico")}
       >
         <option value="" disabled>
           Selecione…

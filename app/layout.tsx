@@ -1,15 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Montserrat, Inter, Barlow_Condensed } from "next/font/google";
+import { Archivo, Inter, Archivo_Narrow } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { FloatingWhatsApp } from "@/components/FloatingWhatsApp";
 import { SmoothScroll } from "@/components/SmoothScroll";
 
-const montserrat = Montserrat({
+// Type system — engineered grotesque voice (Archivo superfamily) + Inter body.
+// NOTE: display + label faces are a proposed identity change pending client
+// sign-off; the brand manual originally specified Montserrat + Barlow Condensed.
+const archivo = Archivo({
   subsets: ["latin"],
   weight: ["600", "700", "800"],
-  variable: "--font-montserrat",
+  variable: "--font-archivo",
   display: "swap",
 });
 
@@ -20,10 +23,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const barlowCondensed = Barlow_Condensed({
+const archivoNarrow = Archivo_Narrow({
   subsets: ["latin"],
-  weight: ["500", "600"],
-  variable: "--font-barlow-condensed",
+  weight: ["500", "600", "700"],
+  variable: "--font-archivo-narrow",
   display: "swap",
 });
 
@@ -32,16 +35,14 @@ const SITE_URL = "https://mj.eng.br";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "MJ Engenharia Preventiva | PPCI e SPDA na Grande Florianópolis",
+    default: "MJ Engenharia Preventiva | PPCI na Grande Florianópolis",
     template: "%s | MJ Engenharia Preventiva",
   },
   description:
-    "Projetos de Preventivo Contra Incêndio (PPCI) e SPDA com assinatura de engenheiro, do dimensionamento à aprovação. Atendimento em toda a Grande Florianópolis/SC.",
+    "Projetos de Preventivo Contra Incêndio (PPCI) com assinatura de engenheiro, do dimensionamento à aprovação. Atendimento em toda a Grande Florianópolis/SC.",
   keywords: [
     "PPCI",
-    "SPDA",
     "projeto preventivo contra incêndio",
-    "proteção contra descargas atmosféricas",
     "AVCB",
     "engenharia preventiva",
     "Florianópolis",
@@ -53,9 +54,9 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: SITE_URL,
     siteName: "MJ Engenharia Preventiva",
-    title: "MJ Engenharia Preventiva: Projetos de PPCI e SPDA",
+    title: "MJ Engenharia Preventiva: Projetos de PPCI",
     description:
-      "Engenharia preventiva com foco em projetos de PPCI e SPDA. Falar com um engenheiro.",
+      "Engenharia preventiva com foco em projetos de PPCI. Falar com um engenheiro.",
   },
   icons: {
     icon: [
@@ -78,14 +79,12 @@ const jsonLd = {
   "@type": "ProfessionalService",
   name: "MJ Engenharia Preventiva",
   description:
-    "Engenharia preventiva: projetos de PPCI e SPDA na Grande Florianópolis/SC.",
+    "Engenharia preventiva: projetos de PPCI na Grande Florianópolis/SC.",
   areaServed: "Grande Florianópolis, Santa Catarina, Brasil",
   // TODO (CONTENT_PENDING): telephone, address, CREA, sameAs (social), url
   knowsAbout: [
     "PPCI",
-    "SPDA",
     "Projeto preventivo contra incêndio",
-    "Proteção contra descargas atmosféricas",
   ],
 };
 
@@ -95,7 +94,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${montserrat.variable} ${inter.variable} ${barlowCondensed.variable}`}
+      className={`${archivo.variable} ${inter.variable} ${archivoNarrow.variable}`}
     >
       <body>
         {/* Mark JS active before paint so .reveal elements can hide-then-animate

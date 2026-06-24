@@ -11,7 +11,7 @@ Aprovado — arquitetura validada, pronto para implementação.
 
 ## Contexto do negócio
 - Empresa de **engenharia preventiva** com foco em **projetos**.
-- Carro-chefe: **Projeto de Preventivo Contra Incêndio (PPCI)** e **Projeto de SPDA** (proteção contra descargas atmosféricas).
+- Carro-chefe: **Projeto de Preventivo Contra Incêndio (PPCI)**.
 - Atuação: **Grande Florianópolis / SC**.
 - Responsável técnico: **Eng. Civil Milton Chagas** (CREA a confirmar).
 - Serviços complementares: sprinkler, extintores, rota de fuga, consultoria e (secundário) laudo / regularização / AVCB.
@@ -19,12 +19,12 @@ Aprovado — arquitetura validada, pronto para implementação.
 ## Confirmed Decisions
 1. **Tipo:** landing page única, narrativa vertical.
 2. **Objetivo:** conversão para **WhatsApp** ("Falar com um engenheiro").
-3. **Posicionamento:** foco em **fazer projetos** (PPCI + SPDA), NÃO em medo legal/multa/interdição. Tom = competência técnica e entrega.
+3. **Posicionamento:** foco em **fazer projetos** (PPCI), NÃO em medo legal/multa/interdição. Tom = competência técnica e entrega.
 4. **Público:** Empresas/indústria, Síndicos/condomínios, Comércio local, Construtoras (4 segmentos).
 5. **Nível visual:** premium e refinado.
 6. **Stack:** Next.js (App Router) + Tailwind, deploy Vercel.
 7. **Conversão principal:** WhatsApp direto (botão flutuante + CTAs `wa.me` com mensagem pré-preenchida). Formulário como via secundária.
-8. **Base de estrutura:** site de referência https://brandventuraengenharia.com.br/ — adotar o esqueleto que funciona, elevar UI/UX, especializar (PPCI/SPDA no centro).
+8. **Base de estrutura:** site de referência https://brandventuraengenharia.com.br/ — adotar o esqueleto que funciona, elevar UI/UX, especializar (PPCI no centro).
 9. **Design system:** derivado do Manual de Identidade Visual fornecido (cores, tipografia, ícones).
 
 ## Identidade visual (fonte: Manual fornecido)
@@ -53,7 +53,8 @@ Aprovado — arquitetura validada, pronto para implementação.
 - Depoimentos de clientes.
 
 ## Suggested Research
-- Termos de busca locais PPCI/SPDA/AVCB + "Grande Florianópolis" para SEO (a validar na fase de conteúdo).
+- Termos de busca locais PPCI/AVCB + "Grande Florianópolis" para SEO (a validar na fase de conteúdo).
 
 ## Change History
-- 2026-06-11: Discovery concluído, triagem + arquitetura aprovadas. Reposicionamento de "medo legal" → "foco em projetos PPCI/SPDA". Estrutura baseada em brandventuraengenharia.com.br com UI/UX elevada.
+- 2026-06-11: Discovery concluído, triagem + arquitetura aprovadas. Reposicionamento de "medo legal" → "foco em projetos PPCI". Estrutura baseada em brandventuraengenharia.com.br com UI/UX elevada.
+- 2026-06-24: SPDA removido do escopo a pedido do cliente. PPCI passa a ser o único carro-chefe.

@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 
 /**
- * Technical badge — Barlow Condensed, uppercase (e.g. PPCI, SPDA, NBR 5419, CREA).
+ * Technical badge — condensed grotesque, uppercase (e.g. PPCI, AVCB, CREA).
  */
 export function Tag({
   children,

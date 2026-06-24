@@ -1,5 +1,11 @@
 # Decisions Log
 
+## 2026-06-24 — SPDA removed from scope
+**Status:** Approved (applied)
+**Decision:** Remove SPDA entirely from the site and positioning. PPCI is now the single flagship specialty. All SPDA copy, the SPDA service card, the PPCI-vs-SPDA FAQ, NBR 5419 references, and SPDA SEO terms were removed.
+**Why:** Client request.
+**Impact:** Hero, Especialidades, Soluções grid, FAQ, metadata/SEO, CONTENT_PENDING (CNT-007 dropped).
+
 ## DEC-001 — Initial project architecture workflow
 **Status:** Approved
 **Decision:** Use Coded by M — Site Architecture System as the pre-production workflow.
@@ -17,14 +23,13 @@
 
 ## DEC-004 — Positioning / copy direction
 **Status:** Approved
-**Decision:** Position around delivering engineering **projects** (PPCI + SPDA), with a confident technical tone. Do NOT lead with legal fear (fines, interdiction, lapsed AVCB). Legal/compliance points may appear only as light technical notes in the FAQ.
+**Decision:** Position around delivering engineering **projects** (PPCI), with a confident technical tone. Do NOT lead with legal fear (fines, interdiction, lapsed AVCB). Legal/compliance points may appear only as light technical notes in the FAQ.
 **Impact:** All copy, Hero, removed "dores/medo" section, FAQ tone.
 
-## DEC-005 — Flagship specialties
+## DEC-005 — Flagship specialty
 **Status:** Approved
-**Decision:** Elevate **PPCI** and **SPDA** as the two flagship specialties, given dedicated anchor blocks. Laudo / regularização / AVCB are secondary complementary services.
+**Decision:** Elevate **PPCI** as the flagship specialty, given a dedicated anchor block. Laudo / regularização / AVCB are secondary complementary services. (SPDA was removed from scope on 2026-06-24.)
 **Impact:** "Especialidades" section, services grid ordering, SEO focus.
-**Note:** SPDA has no icon in the brand kit → tracked in CONTENT_PENDING.
 
 ## DEC-006 — Target audience
 **Status:** Approved
@@ -63,10 +68,10 @@
 - Replaced repeated per-section eyebrows with a numbered section index system (00–07) in Barlow Condensed — a deliberate named brand system.
 - Killed identical icon-card grids: Soluções → numbered engineering index list; Processo → horizontal timeline with hairline connectors; Diferenciais → numbered typographic statements; Segmentos → rule-separated row; Especialidades → asymmetric editorial blocks with real photography.
 - Oversize Montserrat display (`clamp`), tight tracking, red used as true signal/emphasis (committed, not timid); navy drench in hero.
-- Real, verified illustrative imagery (Unsplash, navy duotone) for the two flagships — NOT client projects: PPCI = fire-protection valves/pumps; SPDA = lightning strike on a tower.
+- Real, verified illustrative imagery (Unsplash, navy duotone) for the flagship — NOT client projects: PPCI = fire-protection valves/pumps.
 - Dropped the fake "Projetos" placeholder gallery; nav is Especialidades · Soluções · Processo · Sobre · Contato.
 - Tinted neutrals (no pure #fff), sharper radii.
-**Image credits (Unsplash, no attribution required):** PPCI photo 1690973692388 (Rose Galloway Green); SPDA photo 1681908113034 (Timo Volz).
+**Image credits (Unsplash, no attribution required):** PPCI photo 1690973692388 (Rose Galloway Green).
 **Impact:** Hero, all sections, DESIGN_SYSTEM type/color, nav/IA.
 
 ## DEC-011 — Implementation-time technical choices

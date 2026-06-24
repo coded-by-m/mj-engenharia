@@ -32,7 +32,7 @@ export function Hero() {
         <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
           <Reveal delay={160} className="lg:col-span-7">
             <p className="max-w-xl text-lg leading-relaxed text-grey-200/85 sm:text-xl">
-              Adequação de projetos de arquitetos e clientes para PPCI e SPDA:
+              Adequação de projetos de arquitetos e clientes para PPCI:
               máxima conformidade normativa com o menor custo de obra.{" "}
               <span className="underline decoration-accent decoration-2 underline-offset-4">
                 Engenharia que resolve.

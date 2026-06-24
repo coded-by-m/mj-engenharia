@@ -87,11 +87,6 @@ export const services = [
     text: "Prevenção e proteção contra incêndio, com aprovação no CBMSC.",
   },
   {
-    icon: "ic-escudo",
-    title: "Projeto de SPDA",
-    text: "Proteção contra descargas atmosféricas conforme NBR 5419.",
-  },
-  {
     icon: "ic-sprinkler",
     title: "Sprinklers",
     text: "Dimensionamento de chuveiros automáticos e rede hidráulica.",
@@ -271,30 +266,25 @@ export const segments = [
   },
 ] as const;
 
-/** Differentiators. */
+/** Differentiators. Rendered as a numbered index (no icons) in Diferenciais. */
 export const differentiators = [
   {
-    icon: "ic-consultoria",
     title: "Atendimento direto com engenheiro",
     text: "Você fala com quem assina o projeto, sem intermediários.",
   },
   {
-    icon: "ic-laudo",
     title: "Rigor técnico e normativo",
     text: "Projetos conforme normas e exigências do CBMSC.",
   },
   {
-    icon: "ic-escudo",
     title: "Soluções completas",
     text: "Do diagnóstico ao acompanhamento da aprovação.",
   },
   {
-    icon: "ic-projeto",
     title: "Compromisso com prazos",
     text: "Entregas organizadas e previsíveis.",
   },
   {
-    icon: "ic-empresa",
     title: "Atuação regional",
     text: "Atendimento em toda a Grande Florianópolis.",
   },
@@ -310,10 +300,6 @@ export const steps = [
 
 /** FAQ. */
 export const faq = [
-  {
-    q: "Qual a diferença entre PPCI e SPDA?",
-    a: "PPCI é o projeto de prevenção e proteção contra incêndio; SPDA é o sistema de proteção contra descargas atmosféricas (para-raios), conforme a NBR 5419. Atuamos nos dois.",
-  },
   {
     q: "Vocês acompanham até a aprovação no CBMSC?",
     a: "Sim. O escopo vai do dimensionamento ao acompanhamento da análise até a aprovação.",

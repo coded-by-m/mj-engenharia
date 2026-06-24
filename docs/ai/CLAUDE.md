@@ -11,7 +11,7 @@
 
 ## Project-specific rules
 - Conversion is **WhatsApp** ("Falar com um engenheiro") — keep CTAs reachable everywhere.
-- Positioning: **projetos PPCI + SPDA** as flagship. Tone = technical competence, NOT legal fear.
+- Positioning: **projetos PPCI** as flagship. Tone = technical competence, NOT legal fear.
 - Red (`#D62828`) only on CTAs/accents. Navy is the brand base.
 - Use provided brand SVGs/fonts; never invent metrics, CREA, testimonials or contact data — use CONTENT_PENDING placeholders.
 - Stack: Next.js + Tailwind, `next/font`, `next/image`, Vercel.

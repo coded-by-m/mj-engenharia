@@ -12,7 +12,7 @@ export function Solucoes() {
         kicker="Soluções"
         title="O escopo técnico, por inteiro"
       >
-        Além de PPCI e SPDA, todo o sistema preventivo dimensionado e
+        Além do PPCI, todo o sistema preventivo dimensionado e
         documentado.
       </SectionHeader>
 

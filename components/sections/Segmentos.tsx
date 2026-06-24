@@ -6,12 +6,16 @@ import { segments } from "@/lib/site";
 export function Segmentos() {
   return (
     <Section id="segmentos" variant="alt" space="tight">
-      <div className="flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between">
-        <h2 className="display display-lg max-w-xl text-brand-deep">
+      <div className="max-w-3xl">
+        <div className="flex items-center gap-3 text-muted">
+          <span className="idx text-sm text-accent">04</span>
+          <span className="hairline w-10" />
+          <span className="kicker">Onde atuamos</span>
+        </div>
+        <h2 className="display display-lg mt-5 max-w-xl text-brand-deep">
           Atende quem precisa{" "}
           <span className="text-accent">aprovar de verdade</span>.
         </h2>
-        <p className="kicker text-muted lg:pb-2">Onde atuamos</p>
       </div>
 
       <div className="mt-12 grid grid-cols-1 divide-y divide-line border-y border-line sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4">

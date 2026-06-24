@@ -1,6 +1,6 @@
 # MJ Engenharia
 
-Landing page da **MJ Engenharia** — engenharia preventiva com foco em projetos de **PPCI** (Preventivo Contra Incêndio) e **SPDA** (Proteção contra Descargas Atmosféricas), na Grande Florianópolis/SC. Conversão via WhatsApp ("Falar com um engenheiro").
+Landing page da **MJ Engenharia** — engenharia preventiva com foco em projetos de **PPCI** (Preventivo Contra Incêndio), na Grande Florianópolis/SC. Conversão via WhatsApp ("Falar com um engenheiro").
 
 ## Stack
 

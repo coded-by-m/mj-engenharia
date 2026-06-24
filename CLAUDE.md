@@ -15,7 +15,7 @@ Before making changes, read:
 
 ## Project snapshot
 - **What:** Premium single-page landing for MJ Engenharia (engenharia preventiva, Grande Florianópolis/SC).
-- **Flagship:** Projetos de PPCI + SPDA. Tone = technical competence, NOT legal fear.
+- **Flagship:** Projetos de PPCI. Tone = technical competence, NOT legal fear.
 - **Conversion:** WhatsApp ("Falar com um engenheiro"), `wa.me` deep links + floating button.
 - **Stack:** Next.js (App Router) + Tailwind, `next/font`, `next/image`, Vercel.
 - **Brand:** navy base (`#073B4C`/`#0B2A36`), red (`#D62828`) for CTAs only; Montserrat/Inter/Barlow Condensed; assets in `Identidade Visual/`.

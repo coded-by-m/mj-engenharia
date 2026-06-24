@@ -41,8 +41,8 @@ Relevant content is missing and may affect implementation. Use clearly-marked pl
 **Type:** Imagery / proof
 **Status:** Not received — using illustrative stock for now
 **Impact:** Especialidades blocks currently use illustrative Unsplash photos (navy duotone), clearly NOT client projects. The fake "Projetos" gallery was removed (DEC-012).
-**Used in:** Especialidades (PPCI, SPDA).
-**Current placeholder:** Unsplash 1690973692388 (PPCI), 1681908113034 (SPDA).
+**Used in:** Especialidades (PPCI).
+**Current placeholder:** Unsplash 1690973692388 (PPCI).
 **Requirements:** Real project photos with usage rights → can replace the stock and reintroduce a genuine case-studies section.
 
 ### CNT-006 — Testimonials
@@ -52,14 +52,6 @@ Relevant content is missing and may affect implementation. Use clearly-marked pl
 **Used in:** Projetos realizados.
 **Current placeholder:** Hidden or placeholder card.
 **Requirements:** Client name, role/segment, quote, consent.
-
-### CNT-007 — SPDA icon
-**Type:** Visual asset
-**Status:** Missing from brand kit
-**Impact:** SPDA flagship block and Soluções card lack a dedicated icon.
-**Used in:** Especialidades (SPDA), Soluções.
-**Current placeholder:** Reuse `ic-escudo`/derive a line icon in brand style.
-**Requirements:** SPDA line icon matching the existing 12-icon set (raio/para-raios + NBR 5419 motif).
 
 ### CNT-008 — Social profiles
 **Type:** Links

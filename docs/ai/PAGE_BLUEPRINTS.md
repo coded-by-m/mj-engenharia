@@ -5,11 +5,11 @@
 ## Home Blueprint
 
 ### Objective
-Convert visitors to WhatsApp around PPCI/SPDA engineering projects; communicate specialist authority with premium, organized UI/UX.
+Convert visitors to WhatsApp around PPCI engineering projects; communicate specialist authority with premium, organized UI/UX.
 
 ### Hierarchy
 1. Hero promise + primary CTA (highest priority).
-2. Especialidades PPCI/SPDA (depth = authority).
+2. Especialidades PPCI (depth = authority).
 3. Soluções grid (scope).
 4. Quem Somos + Diferenciais (trust).
 5. Projetos (proof).
@@ -21,25 +21,25 @@ Convert visitors to WhatsApp around PPCI/SPDA engineering projects; communicate 
 [Header fixo: logo | Especialidades Soluções Quem Somos Projetos Contato | (WhatsApp CTA)]
 
 [Hero]
-  H1: Projetos de Preventivo contra Incêndio e SPDA, do dimensionamento à aprovação
+  H1: Projetos de Preventivo contra Incêndio, do dimensionamento à aprovação
   Sub: Engenharia preventiva com assinatura de responsável técnico — Grande Florianópolis/SC
   [ Falar com um engenheiro (WhatsApp, primary) ]   [ Ver especialidades (scroll) ]
   selo: Eng. Civil Milton Chagas · CREA [pendente]
   visual: imagem real + overlay navy (placeholder)
 
-[Especialidades — 2 blocos âncora]
-  ┌ PPCI ─────────────┐   ┌ SPDA ─────────────┐
-  │ ícone | título     │   │ ícone | título     │
-  │ o que entrega:     │   │ o que entrega:     │
-  │ memorial, dimens., │   │ projeto, laudo,    │
-  │ ART, pranchas,     │   │ medições, ART,     │
-  │ aprovação CBMSC    │   │ adequação NBR 5419 │
-  │ [Falar no WhatsApp]│   │ [Falar no WhatsApp]│
-  └────────────────────┘   └────────────────────┘
+[Especialidades — bloco âncora]
+  ┌ PPCI ─────────────┐
+  │ ícone | título     │
+  │ o que entrega:     │
+  │ memorial, dimens., │
+  │ ART, pranchas,     │
+  │ aprovação CBMSC    │
+  │ [Falar no WhatsApp]│
+  └────────────────────┘
 
 [Soluções — grid de cards (3 col desktop / 2 tablet / 1 mobile)]
-  [Projeto PPCI] [Projeto SPDA] [Sprinkler]
-  [Extintores]   [Rota de fuga] [Consultoria]
+  [Projeto PPCI] [Sprinkler]   [Extintores]
+  [Rota de fuga] [Consultoria]
   [Laudo / Regularização / AVCB (secundário)]
   cada card: ícone linear da marca + título + 1 linha + link
 
@@ -68,7 +68,7 @@ Convert visitors to WhatsApp around PPCI/SPDA engineering projects; communicate 
   endereço [pendente] + mapa + área de atuação
 
 [FAQ] (acima do rodapé ou dentro de Contato)
-  escopo de projeto · prazos · ART · aprovação CBMSC · diferença PPCI x SPDA
+  escopo de projeto · prazos · ART · aprovação CBMSC
 
 [Rodapé: logo | menu | contatos | redes | © MJ Engenharia]
 
@@ -85,7 +85,7 @@ Same as Home (single page). Conversion redundancy: WhatsApp CTA in header, hero,
 
 ## Services / Products Blueprint
 "Soluções" + "Especialidades" together act as the services architecture:
-- Two flagship deep blocks (PPCI, SPDA) with deliverable lists.
+- One flagship deep block (PPCI) with a deliverable list.
 - A card grid for the full service set using the brand's 12 linear icons.
 - Each card: icon + title + one-line value + optional anchor; hover = refined elevation.
 - Card content uses real service names; deliverable specifics use placeholders where exact scope/wording is unconfirmed.

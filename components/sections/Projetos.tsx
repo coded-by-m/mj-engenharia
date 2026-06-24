@@ -8,7 +8,7 @@ import { projects } from "@/lib/site";
 export function Projetos() {
   return (
     <Section id="projetos" variant="alt">
-      <SectionHeader num="06" kicker="Casos" title="Da prancha ao carimbo">
+      <SectionHeader num="07" kicker="Casos" title="Da prancha ao carimbo">
         Projetamos a obra em BIM e desenhamos dentro dela a rede de segurança que
         ninguém vê. Arraste a barra para revelar o sistema preventivo dentro de
         cada projeto. Nomes e locais preservados.
