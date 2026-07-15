@@ -126,11 +126,24 @@
   .note{max-width:720px;margin:44px auto 0;font-size:12.5px;color:var(--grey-500);text-align:center;line-height:1.65;}
   .note b{color:var(--navy-700);}
 
+  .crop{display:none;}
+
+  @page{ size:96mm 56mm; margin:0; }
   @media print{
-    body{background:#fff;padding:0;}
+    html,body{background:var(--card-bg);margin:0;padding:0;}
     .page-head,.toolbar,.note,.card-wrap > span{display:none;}
-    .pair{gap:0;display:block;}
-    .card{box-shadow:none;border-radius:0;page-break-after:always;margin:0 auto;}
+    .pair{gap:0;display:block;margin:0;}
+    .card-wrap{margin:0;gap:0;}
+    /* box-shadow navy gigante (sem blur) preenche a página ao redor do cartão,
+       cobrindo o arredondamento da mediabox — sem mexer no layout do conteúdo */
+    .card{box-shadow:0 0 0 40mm var(--card-bg);border-radius:0;page-break-after:always;margin:0;}
+
+    /* ===== modo COM MARCAS DE CORTE (body.with-marks): página 106x66mm ===== */
+    body.with-marks{background:#fff;}
+    body.with-marks .pair{display:block;margin:0;}
+    body.with-marks .card-wrap{position:relative;width:106mm;height:66mm;display:flex;align-items:center;justify-content:center;background:#fff;margin:0;padding:0;page-break-after:always;overflow:visible;}
+    body.with-marks .card{width:96mm;height:56mm;box-shadow:none;border-radius:0;margin:0;overflow:hidden;page-break-after:auto;break-after:auto;}
+    body.with-marks .crop{display:block;position:absolute;top:0;left:0;width:106mm;height:66mm;pointer-events:none;}
   }
 </style>
 </head>
@@ -149,6 +162,7 @@
 
   <!-- ===================== FRENTE ===================== -->
   <div class="card-wrap">
+    <svg class="crop" viewBox="0 0 106 66" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" stroke-width="0.12" shape-rendering="crispEdges"><line x1="8" y1="1.5" x2="8" y2="5"/><line x1="98" y1="1.5" x2="98" y2="5"/><line x1="8" y1="61" x2="8" y2="64.5"/><line x1="98" y1="61" x2="98" y2="64.5"/><line x1="1.5" y1="8" x2="5" y2="8"/><line x1="1.5" y1="58" x2="5" y2="58"/><line x1="101" y1="8" x2="104.5" y2="8"/><line x1="101" y1="58" x2="104.5" y2="58"/></g></svg>
     <div class="card front">
       <div class="content">
         <div class="lockup">
@@ -171,6 +185,7 @@
 
   <!-- ===================== VERSO ===================== -->
   <div class="card-wrap">
+    <svg class="crop" viewBox="0 0 106 66" xmlns="http://www.w3.org/2000/svg"><g stroke="#000" stroke-width="0.12" shape-rendering="crispEdges"><line x1="8" y1="1.5" x2="8" y2="5"/><line x1="98" y1="1.5" x2="98" y2="5"/><line x1="8" y1="61" x2="8" y2="64.5"/><line x1="98" y1="61" x2="98" y2="64.5"/><line x1="1.5" y1="8" x2="5" y2="8"/><line x1="1.5" y1="58" x2="5" y2="58"/><line x1="101" y1="8" x2="104.5" y2="8"/><line x1="101" y1="58" x2="104.5" y2="58"/></g></svg>
     <div class="card back">
       <div class="content">
         <div class="upper">
