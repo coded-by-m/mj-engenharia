@@ -9,7 +9,7 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <Section id="faq" variant="light">
+    <Section id="faq" variant="light" cmSection="faq">
       <SectionHeader num="08" kicker="Dúvidas" title="Perguntas comuns">
         Escopo, prazos e responsabilidade técnica dos projetos.
       </SectionHeader>

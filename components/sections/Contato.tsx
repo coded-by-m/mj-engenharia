@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 
 export function Contato() {
   return (
-    <Section id="contato" variant="alt">
+    <Section id="contato" variant="alt" cmSection="contact">
       <div className="grid gap-12 lg:grid-cols-2">
         <div>
           <SectionHeader num="09" kicker="Contato" title="Fale com um engenheiro">
@@ -17,7 +17,7 @@ export function Contato() {
 
           <Reveal delay={100}>
             <div className="mt-6">
-              <WhatsAppCTA size="lg" />
+              <WhatsAppCTA size="lg" cmId="contact-whatsapp" />
             </div>
           </Reveal>
 

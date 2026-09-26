@@ -11,7 +11,7 @@ export const site = {
   crea: "CREA/SC 173.926-0",
   cnpj: "50.770.976/0001-11",
   region: "Grande Florianópolis / SC",
-  url: "https://mj.eng.br",
+  url: "https://www.mj.eng.br",
 
   // Confirmed credentials (client-provided 2026-06-15)
   metrics: {

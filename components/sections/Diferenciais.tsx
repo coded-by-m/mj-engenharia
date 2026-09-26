@@ -4,7 +4,7 @@ import { differentiators } from "@/lib/site";
 
 export function Diferenciais() {
   return (
-    <Section id="diferenciais" variant="navy">
+    <Section id="diferenciais" variant="navy" cmSection="differentiators">
       {/* Asymmetric peak header — breaks the uniform stacked SectionHeader
           grammar while keeping the dossier index (05). */}
       <Reveal>

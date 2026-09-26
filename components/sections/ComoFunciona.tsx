@@ -5,7 +5,7 @@ import { steps } from "@/lib/site";
 
 export function ComoFunciona() {
   return (
-    <Section id="processo" variant="light">
+    <Section id="processo" variant="light" cmSection="process">
       <SectionHeader
         num="03"
         kicker="Processo"

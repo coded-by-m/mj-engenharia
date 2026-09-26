@@ -5,7 +5,7 @@ import { segments } from "@/lib/site";
 
 export function Segmentos() {
   return (
-    <Section id="segmentos" variant="alt" space="tight">
+    <Section id="segmentos" variant="alt" space="tight" cmSection="segments">
       <div className="max-w-3xl">
         <div className="flex items-center gap-3 text-muted">
           <span className="idx text-sm text-accent">04</span>

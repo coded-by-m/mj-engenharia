@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export function Sobre() {
   return (
-    <Section id="sobre" variant="light" space="loose">
+    <Section id="sobre" variant="light" space="loose" cmSection="about">
       <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
           <div className="flex items-center gap-3 text-muted">
@@ -30,7 +30,7 @@ export function Sobre() {
           </Reveal>
           <Reveal delay={200}>
             <div className="mt-8">
-              <WhatsAppCTA />
+              <WhatsAppCTA cmId="about-whatsapp" />
             </div>
           </Reveal>
         </div>

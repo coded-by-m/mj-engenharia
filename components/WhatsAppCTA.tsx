@@ -22,6 +22,7 @@ export function WhatsAppCTA({
   size = "md",
   className = "",
   withIcon = true,
+  cmId,
 }: {
   label?: string;
   message?: string;
@@ -29,6 +30,8 @@ export function WhatsAppCTA({
   size?: "md" | "lg";
   className?: string;
   withIcon?: boolean;
+  /** Stable Coded Tracker id distinguishing this placement (data-cm-id). */
+  cmId?: string;
 }) {
   return (
     <ButtonLink
@@ -38,6 +41,8 @@ export function WhatsAppCTA({
       variant={variant}
       size={size}
       className={className}
+      data-cm-role="whatsapp"
+      data-cm-id={cmId}
     >
       {withIcon && <WhatsAppGlyph />}
       {label}

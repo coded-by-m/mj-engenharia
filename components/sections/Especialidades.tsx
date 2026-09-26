@@ -7,7 +7,12 @@ import { specialties } from "@/lib/site";
 
 export function Especialidades() {
   return (
-    <Section id="especialidades" variant="light" space="loose">
+    <Section
+      id="especialidades"
+      variant="light"
+      space="loose"
+      cmSection="specialties"
+    >
       <SectionHeader
         num="01"
         kicker="Especialidade"
@@ -67,6 +72,7 @@ export function Especialidades() {
                       label={`Falar sobre ${s.tag}`}
                       message={`Olá! Gostaria de falar sobre um projeto de ${s.tag}.`}
                       variant="secondary"
+                      cmId={`specialty-${s.key}-whatsapp`}
                     />
                   </div>
                 </div>

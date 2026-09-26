@@ -55,7 +55,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <WhatsAppCTA size="md" />
+          <WhatsAppCTA size="md" cmId="header-whatsapp" />
         </div>
 
         <button
@@ -90,7 +90,7 @@ export function Header() {
             </a>
           ))}
           <div className="mt-2">
-            <WhatsAppCTA size="md" className="w-full" />
+            <WhatsAppCTA size="md" className="w-full" cmId="mobile-menu-whatsapp" />
           </div>
         </div>
       )}

@@ -17,12 +17,15 @@ export function Section({
   variant = "light",
   space = "default",
   className = "",
+  cmSection,
 }: {
   id?: string;
   children: ReactNode;
   variant?: "light" | "alt" | "navy";
   space?: keyof typeof spacing;
   className?: string;
+  /** Coded Tracker region token (data-cm-section). */
+  cmSection?: string;
 }) {
   const bg =
     variant === "navy"
@@ -33,6 +36,7 @@ export function Section({
   return (
     <section
       id={id}
+      data-cm-section={cmSection}
       className={`scroll-mt-24 ${spacing[space]} ${bg} ${className}`}
     >
       <div className="container-site">{children}</div>

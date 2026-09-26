@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo, Inter, Archivo_Narrow } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -14,6 +15,7 @@ const archivo = Archivo({
   weight: ["600", "700", "800"],
   variable: "--font-archivo",
   display: "swap",
+  // Only the display face is preloaded: it sets the hero <h1> (LCP element).
 });
 
 const inter = Inter({
@@ -21,6 +23,7 @@ const inter = Inter({
   weight: ["400", "500", "600"],
   variable: "--font-inter",
   display: "swap",
+  preload: false,
 });
 
 const archivoNarrow = Archivo_Narrow({
@@ -28,9 +31,11 @@ const archivoNarrow = Archivo_Narrow({
   weight: ["500", "600", "700"],
   variable: "--font-archivo-narrow",
   display: "swap",
+  preload: false,
 });
 
-const SITE_URL = "https://mj.eng.br";
+const SITE_URL = "https://www.mj.eng.br";
+const GA_ID = "G-3TSX7WG8GY";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -40,6 +45,9 @@ export const metadata: Metadata = {
   },
   description:
     "Projetos de Preventivo Contra Incêndio (PPCI) com assinatura de engenheiro, do dimensionamento à aprovação. Atendimento em toda a Grande Florianópolis/SC.",
+  alternates: {
+    canonical: "/",
+  },
   keywords: [
     "PPCI",
     "projeto preventivo contra incêndio",
@@ -96,6 +104,14 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${archivo.variable} ${inter.variable} ${archivoNarrow.variable}`}
     >
+      <head>
+        {/* Coded Insights — first-party analytics (Coded Tracker). */}
+        <script
+          defer
+          src="https://insights.codedbym.com/tracker/v1.js"
+          data-site="ci_pub_b10623f5935db1f1d25a0fa596b80eea"
+        ></script>
+      </head>
       <body>
         {/* Mark JS active before paint so .reveal elements can hide-then-animate
             without a flash; without JS, content stays visible. */}
@@ -112,6 +128,14 @@ export default function RootLayout({
         {children}
         <Footer />
         <FloatingWhatsApp />
+        {/* Google Analytics 4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

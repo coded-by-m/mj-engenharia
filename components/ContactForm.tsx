@@ -88,7 +88,13 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="grid gap-4">
+    <form
+      onSubmit={handleSubmit}
+      noValidate
+      className="grid gap-4"
+      data-cm-role="lead-form"
+      data-cm-id="contact-form"
+    >
       <div className="grid gap-4 sm:grid-cols-2">
         <TextField
           id="nome"
@@ -162,6 +168,8 @@ export function ContactForm() {
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cm-role="whatsapp"
+                data-cm-id="contact-form-fallback"
                 className="font-medium text-accent underline underline-offset-4"
               >
                 Toque aqui para falar agora
@@ -175,6 +183,8 @@ export function ContactForm() {
                 href={waLink}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-cm-role="whatsapp"
+                data-cm-id="contact-form-fallback"
                 className="font-medium text-accent underline underline-offset-4"
               >
                 Toque aqui para falar no WhatsApp

@@ -6,7 +6,7 @@ import { services } from "@/lib/site";
 
 export function Solucoes() {
   return (
-    <Section id="solucoes" variant="alt">
+    <Section id="solucoes" variant="alt" cmSection="services">
       <SectionHeader
         num="02"
         kicker="Soluções"

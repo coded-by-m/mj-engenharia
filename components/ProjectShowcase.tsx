@@ -56,7 +56,6 @@ export function ProjectShowcase({
               after={p.images.xray}
               alt={{ before: p.alt.arq, after: p.alt.ppci }}
               sizes="(max-width: 1024px) 100vw, 58vw"
-              priority={index === 0}
             />
           </div>
 

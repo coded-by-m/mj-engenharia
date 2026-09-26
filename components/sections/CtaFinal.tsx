@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export function CtaFinal() {
   const instagram = site.social.instagram;
   return (
-    <Section variant="navy" space="tight">
+    <Section variant="navy" space="tight" cmSection="final-cta">
       <Reveal>
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <h2 className="display display-lg max-w-2xl text-white">
@@ -14,7 +14,7 @@ export function CtaFinal() {
             <span className="text-accent">conversa</span>.
           </h2>
           <div className="flex shrink-0 flex-col items-start gap-4">
-            <WhatsAppCTA size="lg" />
+            <WhatsAppCTA size="lg" cmId="final-cta-whatsapp" />
             {instagram && instagram !== "#" && (
               <a
                 href={instagram}

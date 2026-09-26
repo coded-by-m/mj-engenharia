@@ -7,7 +7,7 @@ import { projects } from "@/lib/site";
 
 export function Projetos() {
   return (
-    <Section id="projetos" variant="alt">
+    <Section id="projetos" variant="alt" cmSection="projects">
       <SectionHeader num="07" kicker="Casos" title="Da prancha ao carimbo">
         Projetamos a obra em BIM e desenhamos dentro dela a rede de segurança que
         ninguém vê. Arraste a barra para revelar o sistema preventivo dentro de
@@ -31,6 +31,7 @@ export function Projetos() {
             label="Falar sobre um projeto como o seu"
             message="Olá! Vi os projetos no site e gostaria de falar sobre um caso parecido com o meu."
             variant="secondary"
+            cmId="projects-whatsapp"
           />
         </div>
       </Reveal>

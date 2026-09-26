@@ -4,7 +4,10 @@ import { site } from "@/lib/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-brand-drench text-white">
+    <section
+      data-cm-section="hero"
+      className="relative overflow-hidden bg-brand-drench text-white"
+    >
       {/* Single red signal sweep */}
       <div
         aria-hidden
@@ -39,9 +42,11 @@ export function Hero() {
               </span>
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
-              <WhatsAppCTA size="lg" />
+              <WhatsAppCTA size="lg" cmId="hero-whatsapp" />
               <a
                 href="#especialidades"
+                data-cm-role="secondary-cta"
+                data-cm-id="hero-specialties"
                 className="kicker border-b border-white/30 pb-1 text-white/80 transition-colors hover:border-accent hover:text-white"
               >
                 Ver especialidades →
