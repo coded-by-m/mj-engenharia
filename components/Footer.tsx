@@ -49,7 +49,15 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>{site.region}</li>
               <li>{site.email}</li>
-              <li>{site.phone}</li>
+              <li>
+                <a
+                  href={`tel:+${site.whatsappNumber}`}
+                  data-cm-role="phone"
+                  data-cm-id="footer-phone"
+                >
+                  {site.phone}
+                </a>
+              </li>
             </ul>
           </div>
         </div>
