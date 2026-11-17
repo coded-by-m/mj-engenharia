@@ -105,6 +105,8 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
+      // The inline script below adds `js` to this element before hydration.
+      suppressHydrationWarning
       className={`${archivo.variable} ${inter.variable} ${archivoNarrow.variable}`}
     >
       <head>

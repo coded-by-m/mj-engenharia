@@ -37,7 +37,8 @@ export function SmoothScroll() {
       const target = document.querySelector(hash);
       if (!target) return;
       e.preventDefault();
-      lenis.scrollTo(target as HTMLElement, { offset: -80, duration: 1.1 });
+      // Lenis honors the section's scroll-mt-24, which clears the fixed header.
+      lenis.scrollTo(target as HTMLElement, { duration: 1.1 });
     };
     document.addEventListener("click", onClick);
 

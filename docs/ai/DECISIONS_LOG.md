@@ -1,5 +1,18 @@
 # Decisions Log
 
+## DEC-015 — Hero revision (2026-11-07)
+**Status:** Approved by developer (applied)
+**Decision:**
+- H1 is fully white; red in the hero is limited to the CTA and the fire network in the drawing. This narrows DEC-012's "committed" red for the hero only.
+- The hero background is a generated drafting scene: a street canyon of structural frames in three-point perspective, in low-contrast linework, with the main tower's fire-protection system in red on its front facade. The system is shown as one riser diagram: a fire reserve in the roof tank, a hydrant riser with a cabinet per floor, a sprinkler riser with an alarm valve and a branch per floor, and the siamese connection on the pavement. Columns and slabs have real thickness, and translucent fills keep what's behind each tower as a ghost, because fully transparent frames read as a tangle of lines (developer feedback). It was chosen by the developer from a dense perspective-wireframe reference, in place of a simpler isometric sketch. It is labeled "Desenho ilustrativo" and must not be presented as a client project. The system is drawn to read correctly, not dimensioned to a standard.
+- The scene carries no text. Drawing-sheet callouts and a height dimension were tried and removed at the developer's request.
+- `scripts/generate-hero-wireframe.mjs` is the source of `components/sections/hero-scene.generated.ts`, rendered inline by `HeroScene.tsx`. Edit the script and regenerate; don't edit the generated file. Inline SVG lets the CSS entrance honour `prefers-reduced-motion` directly, so no static copy is needed. It adds about 10 KB gzipped to the HTML. Each layer is its own `<svg>` (far, mid, near, network), so only the network repaints while it draws.
+- Subhead names the four DEC-006 segments and keeps the "menor custo de obra" line from the client copy commit.
+- The hero entrance is CSS-only, with no `Reveal`, so the first viewport no longer depends on hydration. This closes, for the hero only, the failure DEC-011 left open: scripts that load `.js` but fail to hydrate. Other sections still use `Reveal`.
+- H1 size is bounded by viewport height so the CTA stays in the first viewport on short laptop screens.
+**Open:** "Projetos que passam na primeira análise" stays until the client confirms it (CNT-010). If it can't be supported, use the blueprint line.
+**Impact:** Hero, globals.css, PAGE_BLUEPRINTS hero visual, MOTION_DIRECTION hero entry.
+
 ## 2026-06-24 — SPDA removed from scope
 **Status:** Approved (applied)
 **Decision:** Remove SPDA entirely from the site and positioning. PPCI is now the single flagship specialty. All SPDA copy, the SPDA service card, the PPCI-vs-SPDA FAQ, NBR 5419 references, and SPDA SEO terms were removed.

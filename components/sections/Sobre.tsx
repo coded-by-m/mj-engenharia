@@ -41,7 +41,7 @@ export function Sobre() {
             {[
               ["Responsável técnico", site.legalLead],
               ["Registro profissional", site.crea],
-              ["Projetos", site.metrics.projects],
+              ["Histórico", site.metrics.projects],
               ["Área projetada", site.metrics.area],
               ["Metodologia", site.metrics.method],
               ["Atuação", site.region],

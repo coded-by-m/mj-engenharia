@@ -25,7 +25,7 @@ Convert visitors to WhatsApp around PPCI engineering projects; communicate speci
   Sub: Engenharia preventiva com assinatura de responsável técnico — Grande Florianópolis/SC
   [ Falar com um engenheiro (WhatsApp, primary) ]   [ Ver especialidades (scroll) ]
   selo: Eng. Civil Milton Chagas · CREA [pendente]
-  visual: imagem real + overlay navy (placeholder)
+  visual: cena técnica em perspectiva (wireframe ilustrativo), rede de incêndio em vermelho (DEC-015)
 
 [Especialidades — bloco âncora]
   ┌ PPCI ─────────────┐

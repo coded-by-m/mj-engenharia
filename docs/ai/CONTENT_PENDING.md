@@ -7,18 +7,16 @@ Relevant content is missing and may affect implementation. Use clearly-marked pl
 
 ### CNT-001 — WhatsApp number
 **Type:** Contact / conversion
-**Status:** Not received
+**Status:** In use in `lib/site.ts`; source not recorded, confirm with client
 **Impact:** All primary CTAs and floating button non-functional without it.
 **Used in:** Header, Hero, CTA band, Final CTA, Footer, Floating button, contact area.
-**Current placeholder:** `wa.me/0000000000` with pre-filled message.
 **Requirements:** Official number with DDD (e.g., 48...) + approved pre-filled message text.
 
 ### CNT-002 — CREA number (Eng. Milton Chagas)
 **Type:** Credibility / legal
-**Status:** Not received
+**Status:** In use in `lib/site.ts`; source not recorded, confirm with client
 **Impact:** Authority seal and Quem Somos credibility.
 **Used in:** Hero seal, Quem Somos, Footer.
-**Current placeholder:** "CREA/SC [pendente]".
 **Requirements:** Full CREA registration string.
 
 ### CNT-003 — Address / area of operation
@@ -31,10 +29,9 @@ Relevant content is missing and may affect implementation. Use clearly-marked pl
 
 ### CNT-004 — Proof metrics
 **Type:** Social proof
-**Status:** Not received
+**Status:** Received; `lib/site.ts` marks them client-provided on 2026-06-15. Confirm whether "+100 trabalhos" includes reports and consulting
 **Impact:** Count-up metrics in Quem Somos / proof.
-**Used in:** Quem Somos / Diferenciais.
-**Current placeholder:** "+[N] projetos", "[N] anos", "[N] cidades".
+**Used in:** Hero, Quem Somos / Diferenciais.
 **Requirements:** Real, verifiable numbers. Do not invent.
 
 ### CNT-005 — Real project photos
@@ -63,8 +60,21 @@ Relevant content is missing and may affect implementation. Use clearly-marked pl
 
 ### CNT-009 — Email / phone
 **Type:** Contact
-**Status:** Not received
+**Status:** In use in `lib/site.ts`; source not recorded, confirm with client
 **Impact:** Footer, form fallback, email signature alignment.
 **Used in:** Footer, Contato.
-**Current placeholder:** "[email pendente]", "[telefone pendente]".
 **Requirements:** Official email and phone.
+
+### CNT-010 — Hero headline claim
+**Type:** Claim / copy
+**Status:** Awaiting client (Milton Chagas)
+**Impact:** "Projetos que passam na primeira análise" implies a result the repo has no evidence for. It dates from the initial commit, before the client copy commit.
+**Used in:** Hero H1.
+**Requirements:** Client confirms and can support the claim. Otherwise use "Projetos de PPCI, do dimensionamento à aprovação no CBMSC" (see DEC-015). Also confirm the superlative "menor custo de obra" in the subhead.
+
+### CNT-011 — Typeface sign-off
+**Type:** Brand
+**Status:** Awaiting client
+**Impact:** The site renders Archivo / Archivo Narrow / Inter, while the brand manual and `DESIGN_SYSTEM.md` specify Montserrat / Barlow Condensed / Inter.
+**Used in:** Whole site (`app/layout.tsx`, `app/globals.css`).
+**Requirements:** Approve Archivo and update the docs, or return to the manual's fonts.

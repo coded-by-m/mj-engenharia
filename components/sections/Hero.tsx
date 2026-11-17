@@ -1,82 +1,81 @@
 import { WhatsAppCTA } from "@/components/WhatsAppCTA";
-import { Reveal } from "@/components/Reveal";
 import { site } from "@/lib/site";
+import { HeroScene } from "./HeroScene";
+
+const credentials = [
+  ["Responsável técnico", site.legalLead],
+  ["Registro", site.crea],
+  ["Histórico", site.metrics.projects],
+  ["Área projetada", site.metrics.area],
+] as const;
 
 export function Hero() {
   return (
     <section
       data-cm-section="hero"
-      className="relative overflow-hidden bg-brand-drench text-white"
+      className="relative isolate overflow-hidden bg-brand-drench text-white"
     >
-      {/* Single red signal sweep */}
+      <HeroScene className="absolute inset-x-0 -bottom-28 -z-10 h-[30rem] lg:inset-0 lg:h-auto" />
       <div
         aria-hidden
-        className="pointer-events-none absolute right-0 top-0 h-px w-1/2 bg-accent/60"
+        className="hero-scrim absolute inset-x-0 -bottom-28 -z-10 h-[30rem] lg:inset-0 lg:h-auto"
       />
 
-      <div className="container-site relative pb-20 pt-40 sm:pt-48 lg:pb-28 lg:pt-56">
-        {/* technical readout line */}
-        <Reveal>
-          <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-white/55">
-            <span className="idx text-xs text-accent">00</span>
-            <span className="hairline w-8" />
-            <span className="kicker">Engenharia preventiva</span>
-            <span className="kicker">· {site.region}</span>
+      <div className="container-site relative grid pb-72 pt-28 sm:pt-32 lg:min-h-[min(100svh,54rem)] lg:grid-cols-12 lg:content-end lg:items-end lg:gap-x-10 lg:pb-20">
+        <div className="lg:col-span-7">
+          {/* technical readout line */}
+          <div className="hero-rise flex items-center gap-x-4 text-white/55">
+            <span aria-hidden className="idx hidden text-xs sm:inline">
+              00
+            </span>
+            <span aria-hidden className="hairline hidden w-8 sm:block" />
+            <span className="kicker">PPCI · {site.region}</span>
           </div>
-        </Reveal>
 
-        <Reveal delay={80}>
-          <h1 className="display display-xl mt-7 max-w-[14ch] text-white">
-            Projetos que{" "}
-            <span className="text-accent">passam na primeira análise</span>.
+          <h1
+            className="hero-rise display display-hero mt-6 max-w-[14ch] text-white"
+            style={{ animationDelay: "80ms" }}
+          >
+            Projetos que passam na primeira análise.
           </h1>
-        </Reveal>
 
-        <div className="mt-10 grid gap-10 lg:grid-cols-12 lg:items-end">
-          <Reveal delay={160} className="lg:col-span-7">
-            <p className="max-w-xl text-lg leading-relaxed text-grey-200/85 sm:text-xl">
-              Adequação de projetos de arquitetos e clientes para PPCI:
-              máxima conformidade normativa com o menor custo de obra.{" "}
-              <span className="underline decoration-accent decoration-2 underline-offset-4">
-                Engenharia que resolve.
-              </span>
+          <div className="hero-rise mt-6" style={{ animationDelay: "160ms" }}>
+            <p className="max-w-xl text-base leading-relaxed text-grey-200/85 sm:text-lg lg:text-xl">
+              Projetos e adequações de PPCI, com ART, para indústrias,
+              condomínios, comércio e construtoras: máxima conformidade
+              normativa com o menor custo de obra. Engenharia que resolve.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-3">
-              <WhatsAppCTA size="lg" cmId="hero-whatsapp" />
+            <div className="mt-8 flex flex-wrap items-center gap-x-5 gap-y-1">
+              <WhatsAppCTA size="lg" className="w-full sm:w-auto" cmId="hero-whatsapp" />
               <a
                 href="#especialidades"
                 data-cm-role="secondary-cta"
                 data-cm-id="hero-specialties"
-                className="kicker border-b border-white/30 pb-1 text-white/80 transition-colors hover:border-accent hover:text-white"
+                className="group kicker inline-flex min-h-11 items-center text-white/80 transition-colors hover:text-white"
               >
-                Ver especialidades →
+                <span className="border-b border-white/30 pb-1 transition-colors group-hover:border-accent">
+                  Ver especialidades →
+                </span>
               </a>
             </div>
-          </Reveal>
+          </div>
+        </div>
 
-          {/* Inline technical signature — replaces the generic seal card */}
-          <Reveal delay={240} className="lg:col-span-5 lg:justify-self-end">
-            <div className="flex gap-6 border-t border-white/15 pt-5 lg:border-t-0 lg:border-l lg:pl-6 lg:pt-0">
-              <dl className="grid grid-cols-2 gap-x-8 gap-y-4 text-sm">
-                <div>
-                  <dt className="kicker text-white/45">Resp. técnico</dt>
-                  <dd className="mt-1 text-white">{site.legalLead}</dd>
-                </div>
-                <div>
-                  <dt className="kicker text-white/45">Registro</dt>
-                  <dd className="mt-1 text-white">{site.crea}</dd>
-                </div>
-                <div>
-                  <dt className="kicker text-white/45">Projetos</dt>
-                  <dd className="mt-1 text-white">{site.metrics.projects}</dd>
-                </div>
-                <div>
-                  <dt className="kicker text-white/45">Área projetada</dt>
-                  <dd className="mt-1 text-white">{site.metrics.area}</dd>
-                </div>
-              </dl>
-            </div>
-          </Reveal>
+        <div
+          className="hero-rise mt-10 lg:col-span-5 lg:mt-0 xl:col-span-4 xl:col-start-9"
+          style={{ animationDelay: "240ms" }}
+        >
+          <dl className="grid grid-cols-2 gap-x-6 gap-y-4 border-t border-white/15 pt-5 text-sm">
+            {credentials.map(([term, value]) => (
+              <div key={term}>
+                <dt className="kicker text-white/60">{term}</dt>
+                <dd className="mt-1 text-white">{value}</dd>
+              </div>
+            ))}
+          </dl>
+          <p className="mt-5 text-xs text-white/70">
+            Desenho ilustrativo. Em vermelho, a rede de prevenção contra incêndio.
+          </p>
         </div>
       </div>
     </section>

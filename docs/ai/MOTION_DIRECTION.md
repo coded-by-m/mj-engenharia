@@ -18,7 +18,7 @@
 4. **Decorative motion** — minimal; optional faint navy grid/parallax accent, performance-permitting.
 
 ## Page / Section Priorities
-- **Hero:** sequenced reveal of H1, subhead, CTA, seal. Background image subtle scale-in (max ~1.03).
+- **Hero:** CSS-only sequenced entrance of H1, subhead, CTA, seal. The scene's layers fade in far to near. The red fire network then draws itself once, from the pavement connection up the risers and floor by floor (DEC-015).
 - **Especialidades:** the two flagship blocks rise in with light stagger; icon micro-pop on view.
 - **Soluções / Diferenciais:** staggered card reveals; hover elevation + icon accent.
 - **Quem Somos:** photo + text reveal in tandem.

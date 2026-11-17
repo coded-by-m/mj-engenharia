@@ -7,7 +7,7 @@ Premium single-page landing for **MJ Engenharia**, a preventive-engineering firm
 
 ## Client and Business
 - Company: MJ Engenharia
-- Technical lead: Eng. Civil Milton Chagas (CREA — to confirm)
+- Technical lead: Eng. Civil Milton Chagas (CREA/SC 173.926-0 on the site — source to confirm, CNT-002)
 - Field: Engenharia preventiva — projetos de PPCI
 - Region: Grande Florianópolis / SC
 - Audience: indústria/empresas, síndicos/condomínios, comércio local, construtoras

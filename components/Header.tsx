@@ -60,7 +60,7 @@ export function Header() {
 
         <button
           type="button"
-          className={`inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius-sm)] border lg:hidden ${
+          className={`inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-sm)] border lg:hidden ${
             scrolled ? "border-line text-brand" : "border-white/30 text-white"
           }`}
           aria-expanded={open}
