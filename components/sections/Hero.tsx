@@ -1,6 +1,7 @@
 import { WhatsAppCTA } from "@/components/WhatsAppCTA";
 import { site } from "@/lib/site";
-import { HeroScene } from "./HeroScene";
+import { SketchSceneView } from "./SketchScene";
+import { scene } from "./hero-scenes/rua.generated";
 
 const credentials = [
   ["Responsável técnico", site.legalLead],
@@ -15,13 +16,11 @@ export function Hero() {
       data-cm-section="hero"
       className="relative isolate overflow-hidden bg-brand-drench text-white"
     >
-      <HeroScene className="absolute inset-x-0 -bottom-28 -z-10 h-[30rem] lg:inset-0 lg:h-auto" />
-      <div
-        aria-hidden
-        className="hero-scrim absolute inset-x-0 -bottom-28 -z-10 h-[30rem] lg:inset-0 lg:h-auto"
-      />
+      {/* Background at every size: the drawing sits behind the copy. */}
+      <SketchSceneView scene={scene} className="hero-scene absolute inset-0 -z-10 overflow-hidden" />
+      <div aria-hidden className="hero-scrim absolute inset-0 -z-10" />
 
-      <div className="container-site relative grid pb-72 pt-28 sm:pt-32 lg:min-h-[min(100svh,54rem)] lg:grid-cols-12 lg:content-end lg:items-end lg:gap-x-10 lg:pb-20">
+      <div className="container-site relative grid pb-16 pt-28 sm:pt-32 lg:min-h-[min(100svh,54rem)] lg:grid-cols-12 lg:content-end lg:items-end lg:gap-x-10 lg:pb-20">
         <div className="lg:col-span-7">
           {/* technical readout line */}
           <div className="hero-rise flex items-center gap-x-4 text-white/55">

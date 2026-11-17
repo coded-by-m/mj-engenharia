@@ -183,15 +183,42 @@ html.lenis body {
   }
 }
 
-/* Keeps copy legible over the linework. Below lg the scene has its own space
-   under the copy, so only its top edge fades. On desktop the shade hugs the
-   copy, so the street still reads above the headline. */
+/* Frames the drawing. Below lg it is cropped to the building (centre at 76% of
+   the viewBox width) and centred behind the copy, sized by the hero's width or
+   height, whichever is tighter (the building is ~0.43 × frame width tall).
+   From lg it fills the hero, anchored bottom-right like the network's
+   xMaxYMax slice. */
+.hero-scene {
+  container-type: size;
+}
+.hero-frame {
+  --frame-w: min(240cqw, 176cqh);
+  position: absolute;
+  width: var(--frame-w);
+  aspect-ratio: 16 / 9;
+  left: calc(50% - 0.76 * var(--frame-w));
+  top: 50%;
+  translate: 0 -50%;
+}
+@media (min-width: 1024px) {
+  .hero-frame {
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: auto;
+    translate: none;
+  }
+}
+
+/* Keeps copy legible over the linework. Below lg the copy covers the whole
+   drawing, so it is dimmed overall, a bit more under the headline. On desktop
+   the shade hugs the copy, so the building reads beside the headline. */
 .hero-scrim {
   background: linear-gradient(
     to bottom,
-    var(--color-brand-drench) 0%,
-    var(--color-brand-drench) 12%,
-    transparent 30%
+    color-mix(in oklab, var(--color-brand-drench) 80%, transparent) 0%,
+    color-mix(in oklab, var(--color-brand-drench) 58%, transparent) 45%,
+    color-mix(in oklab, var(--color-brand-drench) 62%, transparent) 100%
   );
 }
 @media (min-width: 1024px) {
@@ -200,14 +227,21 @@ html.lenis body {
       linear-gradient(
         to top,
         var(--color-brand-drench) 0%,
-        color-mix(in oklab, var(--color-brand-drench) 62%, transparent) 26%,
-        transparent 48%
+        color-mix(in oklab, var(--color-brand-drench) 45%, transparent) 12%,
+        transparent 30%
       ),
       radial-gradient(
         ellipse 52% 58% at 20% 74%,
         var(--color-brand-drench) 0%,
         color-mix(in oklab, var(--color-brand-drench) 90%, transparent) 45%,
         transparent 85%
+      ),
+      /* behind the credentials block, where the building's base runs */
+      radial-gradient(
+        ellipse 30% 26% at 79% 81%,
+        var(--color-brand-drench) 0%,
+        color-mix(in oklab, var(--color-brand-drench) 85%, transparent) 50%,
+        transparent 100%
       ),
       linear-gradient(
         to right,

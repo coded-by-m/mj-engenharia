@@ -1,5 +1,37 @@
 # Decisions Log
 
+## DEC-017 — Hero scene: street canyon with the PPCI drawn as a real network (2026-11-17)
+**Status:** Approved by the client (option A, chosen over an industrial aerial view) and in production. Replaces DEC-016's drawing; DEC-016's framing and pipeline stand.
+**Decision:**
+- **Source:** the developer supplied a street reference (`design/hero/referencia-rua.png`, kept out of git): curtain-wall towers in one-point perspective from a low eye. `scripts/hero/rua.mjs` redraws it in vector rather than using the raster. That way the fire system shares the buildings' perspective, opacity is set per element, and it weighs ~30 KB gzipped instead of 2 MB.
+- **Shell:** clean CAD linework, thin (0.45–0.8 px) and very transparent. Main lines get a faint wide pass for a soft glow. Facades carry spandrels, paired columns, mullions, sill lines and glazed storefronts. Buildings behind the copy are at about 40% strength.
+- **PPCI as a project network, not pictograms.** Hose cabinets, extinguishers, emergency lights, detectors, flow switches and signs were tried and removed: the developer said they read as air-conditioning units and polluted the image. What's drawn, in red, x-ray, in the corner building:
+  - the roof reservoir with its fire reserve and the header (barrilete) down to the risers;
+  - the hydrant riser, with an outlet (small open box) per floor;
+  - the sprinkler riser, with the alarm valve (bow-tie) at its foot;
+  - under every slab, a cross main feeding three branch lines parallel to the facade, with heads as dots;
+  - the facade siamese connection with its buried feed.
+  - It draws in from the siamese connection, up the risers, then floor by floor.
+- No text or numbers, still labeled "Desenho ilustrativo" (DEC-015 rule).
+- **Scrims:** on desktop, the bottom gradient is lightened and a patch sits behind the credentials block. On mobile, the overall dim is darkened so the drawing stays discreet behind the copy.
+- `sketch.mjs` fix: a dashed `draw()` now fades in, because the `.hero-draw` dash animation erased dash patterns.
+**Impact:** Hero, globals.css scrims, `scripts/hero/rua.mjs`, `public/hero/rua-*.svg`, `hero-scenes/rua.generated.ts`, PAGE_BLUEPRINTS hero visual.
+
+## DEC-016 — Hero scene: isometric cutaway sketch (2026-11-17)
+**Status:** Approved by developer. Its drawing is superseded by DEC-017 (the isometric script was deleted); its framing and pipeline stand. Superseded DEC-015's scene bullets (the street canyon and `generate-hero-wireframe.mjs`); DEC-015's other bullets stand.
+**Decision:**
+- The developer found the DEC-015 canyon too simple and sparse. Three hand-drawn concepts were compared in the real hero (technical section, isometric cutaway, perspective sketch), and the isometric cutaway was chosen, then made minimalist and low-contrast at the developer's request.
+- **Background at every size** (developer request): the scene sits behind the copy on mobile and tablet too, not in a strip under it.
+  - Below lg, `.hero-frame` crops to the subject (centre at 76% of the viewBox width) and centres it behind the copy. It is sized by whichever is tighter, the hero's width or its height, using container query units on `.hero-scene`. An overall scrim keeps the copy legible.
+  - From lg the scene fills the hero, anchored bottom-right, with the copy-hugging scrim.
+- **Pipeline (still in use):**
+  - Scenes are generated at build time by `scripts/hero/<variant>.mjs` on the shared toolkit `scripts/hero/sketch.mjs`. rough.js is a devDependency, no runtime JS.
+  - Pencil layers go to `public/hero/<variant>-{far,mid,near}.svg`, served as cached `<img>`s outside the HTML. The red network goes inline in `components/sections/hero-scenes/<variant>.generated.ts`, so its CSS draw-in honours `prefers-reduced-motion`.
+  - `SketchScene.tsx` renders both.
+  - `scripts/hero/preview.mjs <variant>` renders a PNG with a mock of the copy, for review without a browser.
+  - Edit the scripts and regenerate; never edit generated files.
+**Impact:** Hero, SketchScene, globals.css (`.hero-scene`, `.hero-frame`, `.hero-scrim`).
+
 ## DEC-015 — Hero revision (2026-11-07)
 **Status:** Approved by developer (applied)
 **Decision:**

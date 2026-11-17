@@ -35,3 +35,6 @@ next-env.d.ts
 
 # brand source archives (keep binaries out of git)
 *.rar
+
+# playwright MCP screenshots/snapshots (tooling output)
+.playwright-mcp/
